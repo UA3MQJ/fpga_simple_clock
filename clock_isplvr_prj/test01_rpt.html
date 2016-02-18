@@ -1,0 +1,738 @@
+<HTML>
+<HEAD><TITLE>HTML_REPORT_FILE</TITLE>
+<STYLE TYPE="text/css">
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 10pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 10pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+</HEAD>
+<PRE>
+<A name="Top"></A><H2 align=center> ispLEVER Classic 2.0.00.17.20.15 Fitter Report File </H2>
+<H2 align=center>Copyright(C), 1992-2012, Lattice Semiconductor Corporation</H2>
+<H2 align=center>All Rights Reserved</H2>
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+<A name="Project_Summary"></A><FONT COLOR=maroon><U><B><big>Project_Summary</big></B></U></FONT>
+<BR>
+Project Name         :  test01
+Project Path         :  D:\FPGA_Projects\fpga_simple_clock\clock_isplvr_prj
+Project Fitted on    :  Thu Feb 18 09:40:41 2016
+
+Device               :  M4064_30
+Package              :  44
+GLB Input Mux Size   :  10
+Available Blocks     :  4
+Speed                :  -7.5
+Part Number          :  LC4064V-75T44C
+Source Format        :  Pure_Verilog_HDL
+
+
+<font color=green size=4><span class=blink><strong><B>Project 'test01' Fit Successfully!</B></strong></span></font>
+
+
+<A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
+<BR>
+Prefit Time                     0 secs
+Load Design Time                0.03 secs
+Partition Time                  0.05 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+<A name="Design_Summary"></A><FONT COLOR=maroon><U><B><big>Design_Summary</big></B></U></FONT>
+<BR>
+Total Input Pins                6
+Total Logic Functions           58
+  Total Output Pins             18
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            40
+Total Flip-Flops                34
+  Total D Flip-Flops            21
+  Total T Flip-Flops            13
+  Total Latches                 0
+Total Product Terms             187
+
+Total Reserved Pins             0
+Total Locked Pins               24
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             2
+Total Unique Clock Enables      4
+Total Unique Resets             0
+Total Unique Presets            0
+
+Fmax Logic Levels               2
+
+
+<A name="Device_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>Device_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+</B>Dedicated Pins
+  Clock/Input Pins                  2        2      0    -->   100
+  I/O / Enable Pins                 2        2      0    -->   100
+I/O Pins                           28       20      8    -->    71
+Logic Functions                    64       58      6    -->    90
+  Input Registers                  30        0     30    -->     0
+
+GLB Inputs                        144       83     61    -->    57
+Logical Product Terms             320      153    167    -->    47
+Occupied GLBs                       4        4      0    -->   100
+Macrocells                         64       58      6    -->    90
+
+Control Product Terms:
+  GLB Clock/Clock Enables           4        3      1    -->    75
+  GLB Reset/Presets                 4        0      4    -->     0
+  Macrocell Clocks                 64        0     64    -->     0
+  Macrocell Clock Enables          64       13     51    -->    20
+  Macrocell Enables                64        0     64    -->     0
+  Macrocell Resets                 64        0     64    -->     0
+  Macrocell Presets                64        0     64    -->     0
+
+Global Routing Pool                96       45     51    -->    46
+  GRP from IFB                     ..        5     ..    -->    ..
+    (from input signals)           ..        5     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..       40     ..    -->    ..
+----------------------------------------------------------------------
+
+&lt;Note&gt; 1 : The available PT is the product term that has not been used.
+&lt;Note&gt; 2 : IFB is I/O feedback.
+&lt;Note&gt; 3 : MFB is macrocell feedback.
+
+
+<A name="GLB_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+</B>-------------------------------------------------------------------------------------------
+  GLB    A      4    23    27      4/8      0   14      0              2       34       14
+  GLB    B      2    12    14      2/7      0   15      0              1       22       15
+  GLB    C     11    16    27      8/8      0   14      0              2       41       14
+  GLB    D      0    15    15      6/7      0   15      0              1       56       15
+-------------------------------------------------------------------------------------------
+TOTALS:        17    66    83     20/30     0   58      0              6      153       58
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+&lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+<A name="GLB_Control_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Control_Summary</big></B></U></FONT>
+<BR>
+<B>           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+</B>  GLB    A   1      0         0      5      0      0      0
+  GLB    B   0      0         0      0      0      0      0
+  GLB    C   1      0         0      1      0      0      0
+  GLB    D   1      0         0      7      0      0      0
+------------------------------------------------------------------------------
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+<A name="Optimizer_and_Fitter_Options"></A><FONT COLOR=maroon><U><B><big>Optimizer_and_Fitter_Options</big></B></U></FONT>
+<BR>
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              No
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_DOWN (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+&lt;Note&gt; 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+&lt;Note&gt; 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+<A name="Pinout_Listing"></A><FONT COLOR=maroon><U><B><big>Pinout_Listing</big></B></U></FONT>
+<BR>
+<B>      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+</B>------------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |
+2     |  I_O  |   0  |A10 |        |                 |       |
+3     |  I_O  |   0  |A12 |        |                 |       |
+4     |  I_O  |   0  |A14 |        |                 |       |
+5     |GNDIO0 |   -  |    |        |                 |       |
+6     |VCCIO0 |   -  |    |        |                 |       |
+7     |  I_O  |   0  |B0  |        |                 |       |
+8     |  I_O  |   0  |B2  |        |                 |       |
+9     |  I_O  |   0  |B4  |        |                 |       |
+10    | TCK   |   -  |    |        |                 |       |
+11    | VCC   |   -  |    |        |                 |       |
+12    | GND   |   -  |    |        |                 |       |
+13    |  I_O  |   0  |B8  |    *   |LVCMOS33         | Output|<A href=#8>out_clk</A>
+14    |  I_O  |   0  |B10 |    *   |LVCMOS33         | Input |<A href=#7>in_clk</A>
+15    |  I_O  |   0  |B12 |        |                 |       |
+16    |  I_O  |   0  |B14 |        |                 |       |
+17    |INCLK2 |   1  |    |    *   |LVCMOS33         | Input |<A href=#29>btn_SAFE</A>
+18    |  I_O  |   1  |C0  |    *   |LVCMOS33         | Input |<A href=#28>btn_SS</A>
+19    |  I_O  |   1  |C2  |    *   |LVCMOS33         | Input |<A href=#27>btn_MM</A>
+20    |  I_O  |   1  |C4  |    *   |LVCMOS33         | Input |<A href=#26>btn_HH</A>
+21    |  I_O  |   1  |C6  |    *   |LVCMOS33         | Output|<A href=#25>led_second_tick</A>
+22    |  I_O  |   1  |C8  |    *   |LVCMOS33         | Output|<A href=#24>led21</A>
+23    | TMS   |   -  |    |        |                 |       |
+24    |  I_O  |   1  |C10 |    *   |LVCMOS33         | Output|<A href=#23>led20</A>
+25    |  I_O  |   1  |C12 |    *   |LVCMOS33         | Output|<A href=#22>led19</A>
+26    |  I_O  |   1  |C14 |    *   |LVCMOS33         | Output|<A href=#21>led18</A>
+27    |GNDIO1 |   -  |    |        |                 |       |
+28    |VCCIO1 |   -  |    |        |                 |       |
+29    |  I_O  |   1  |D0  |    *   |LVCMOS33         | Output|<A href=#20>led17</A>
+30    |  I_O  |   1  |D2  |    *   |LVCMOS33         | Output|<A href=#19>led16</A>
+31    |  I_O  |   1  |D4  |    *   |LVCMOS33         | Output|<A href=#18>led15</A>
+32    | TDO   |   -  |    |        |                 |       |
+33    | VCC   |   -  |    |        |                 |       |
+34    | GND   |   -  |    |        |                 |       |
+35    |  I_O  |   1  |D8  |    *   |LVCMOS33         | Output|<A href=#17>led13</A>
+36    |  I_O  |   1  |D10 |    *   |LVCMOS33         | Output|<A href=#16>led12</A>
+37    |  I_O  |   1  |D12 |    *   |LVCMOS33         | Output|<A href=#15>led10</A>
+38    | I_O/OE|   1  |D14 |    *   |LVCMOS33         | Output|<A href=#14>led9</A>
+39    |INCLK0 |   0  |    |    *   |LVCMOS33         | Input |<A href=#6>clk</A>
+40    | I_O/OE|   0  |A0  |    *   |LVCMOS33         | Output|<A href=#13>led8</A>
+41    |  I_O  |   0  |A2  |    *   |LVCMOS33         | Output|<A href=#12>led7</A>
+42    |  I_O  |   0  |A4  |    *   |LVCMOS33         | Output|<A href=#11>led6</A>
+43    |  I_O  |   0  |A6  |    *   |LVCMOS33         | Output|<A href=#10>led_gnd2</A>
+44    |  I_O  |   0  |A8  |    *   |LVCMOS33         | Output|<A href=#9>led_gnd1</A>
+------------------------------------------------------------------------------
+
+&lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
+&lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+&lt;Note&gt; Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+<A name="Input_Signal_List"></A><FONT COLOR=maroon><U><B><big>Input_Signal_List</big></B></U></FONT>
+<BR>
+<B>                Input
+         Pin    Fanout
+ Pin GLB Type           Pullup Signal
+</B>---------------------------------------
+  20   C  I/O   1 A---    Down <A name=26>btn_HH</A>
+  19   C  I/O   1 A---    Down <A name=27>btn_MM</A>
+  17  -- INCLK  3 A-CD    Down <A name=29>btn_SAFE</A>
+  18   C  I/O   1 --C-    Down <A name=28>btn_SS</A>
+  39  -- INCLK    ----    Down <A name=6>clk</A>
+  14   B  I/O   1 -B--    Down <A name=7>in_clk</A>
+---------------------------------------
+
+
+<A name="Output_Signal_List"></A><FONT COLOR=maroon><U><B><big>Output_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+</B>----------------------------------------------------------------------------
+  37   D  6  2   4  1 COM                  ----  Slow   Down <A href=#15>led10</A>
+  36   D  6  2   4  1 COM                  ----  Slow   Down <A href=#16>led12</A>
+  35   D  6  1   5  1 COM                  ----  Slow   Down <A href=#17>led13</A>
+  31   D  5  1   4  1 COM                  ----  Slow   Down <A href=#18>led15</A>
+  30   D  5  1   4  1 COM                  ----  Slow   Down <A href=#19>led16</A>
+  29   D  5  1   4  1 COM                  ----  Slow   Down <A href=#20>led17</A>
+  26   C  8  1   3  1 COM                  ----  Slow   Down <A href=#21>led18</A>
+  25   C  7  1   4  1 COM                  ----  Slow   Down <A href=#22>led19</A>
+  24   C  7  1   4  1 COM                  ----  Slow   Down <A href=#23>led20</A>
+  22   C  6  1   5  1 COM                  ----  Slow   Down <A href=#24>led21</A>
+  42   A  3  1   2  1 COM                  ----  Slow   Down <A href=#11>led6</A>
+  41   A  3  1   1  1 COM                  ----  Slow   Down <A href=#12>led7</A>
+  40   A  3  1   1  1 COM                  ----  Slow   Down <A href=#13>led8</A>
+  38   D  8  1   3  1 COM                  ----  Slow   Down <A href=#14>led9</A>
+  44   A  2  1   1  1 COM                  ----  Slow   Down <A href=#9>led_gnd1</A>
+  43   A  2  1   1  1 COM                  ----  Slow   Down <A href=#10>led_gnd2</A>
+  21   C 10  1   2  1 COM                  ----  Slow   Down <A href=#25>led_second_tick</A>
+  13   B  1  1   1  1 COM                  ----  Slow   Down <A href=#8>out_clk</A>
+----------------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Bidir_Signal_List"></A><FONT COLOR=maroon><U><B><big>Bidir_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+</B>-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Buried_Signal_List"></A><FONT COLOR=maroon><U><B><big>Buried_Signal_List</big></B></U></FONT>
+<BR>
+<B>        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P         Signal
+</B>--------------------------------------------------------
+ 4   C  5  -   3  1 COM              1 --C-  <A href=#55>N_297_0</A>
+10   D  6  -   4  1 COM              1 ---D  <A href=#33>N_298_i</A>
+13   B  1  1   1  1 DFF      R       1 -B--  <A href=#60>clk_div_0_</A>
+ 9   B 10  1   1  1 TFF      R       2 -BC-  <A href=#49>clk_div_10_</A>
+10   B 11  1   1  1 TFF      R       2 -BC-  <A href=#50>clk_div_11_</A>
+11   B 12  1   1  1 TFF      R       2 -BC-  <A href=#51>clk_div_12_</A>
+12   B 13  1   1  1 TFF      R       3 A-CD  <A href=#52>clk_div_13_</A>
+ 3   B  2  1   2  1 DFF      R       1 -B--  <A href=#61>clk_div_1_</A>
+ 1   B  3  1   3  1 DFF      R       1 -B--  <A href=#62>clk_div_2_</A>
+ 0   B  4  1   4  1 DFF      R       1 -B--  <A href=#63>clk_div_3_</A>
+ 2   B  5  1   2  1 DFF      R       1 -B--  <A href=#64>clk_div_4_</A>
+14   B  5  1   1  1 TFF      R       1 -B--  <A href=#65>clk_div_5_</A>
+ 4   B  6  1   1  1 TFF      R       2 -BC-  <A href=#45>clk_div_6_</A>
+ 5   B  7  1   1  1 TFF      R       4 ABCD  <A href=#46>clk_div_7_</A>
+ 6   B  8  1   1  1 TFF      R       2 -BC-  <A href=#47>clk_div_8_</A>
+ 7   B  9  1   1  1 TFF      R       2 -BC-  <A href=#48>clk_div_9_</A>
+14   D  3  1   2  1 DFF      R *     2 A--D  <A href=#38>h_0_</A>
+13   A 15  -   2  1 COM              1 ---D  <A href=#68>h_0__0</A>
+ 9   D  6  1   4  1 DFF      R *     3 A-CD  <A href=#39>h_1_</A>
+ 6   D  8  1   5  1 DFF      R *     2 A--D  <A href=#40>h_2_</A>
+ 7   D  6  1   5  1 DFF      R *     2 A--D  <A href=#41>h_3_</A>
+11   C  4  1   2  1 DFF      R *     3 A-CD  <A href=#42>hh_0_</A>
+ 7   A 21  -   4  1 COM              2 A-C-  <A href=#69>hh_0__0</A>
+ 9   A  5  1   3  1 DFF      R *     2 A--D  <A href=#43>hh_1_</A>
+10   A  3  1   2  1 DFF      R *     2 A-C-  <A href=#30>m_0_</A>
+11   A  8  -   2  1 COM              1 A---  <A href=#66>m_0__0</A>
+ 3   A  6  1   4  1 DFF      R *     2 A-C-  <A href=#31>m_1_</A>
+ 5   A  5  1   4  1 DFF      R *     2 A-C-  <A href=#32>m_2_</A>
+ 1   A  6  1   5  1 DFF      R *     2 A-C-  <A href=#34>m_3_</A>
+13   D  3  1   2  1 DFF      R *     3 A-CD  <A href=#35>mm_0_</A>
+12   A 12  -   2  1 COM              1 ---D  <A href=#67>mm_0__0</A>
+11   D  5  1   3  1 DFF      R *     2 A--D  <A href=#36>mm_1_</A>
+12   D  5  1   3  1 DFF      R *     3 A-CD  <A href=#37>mm_2_</A>
+13   C  3  1   1  1 DFF      R       2 A-C-  <A href=#53>sec_0_</A>
+12   C  4  1   2  1 DFF      R       2 A-C-  <A href=#54>sec_1_</A>
+ 5   C  5  1   3  1 DFF      R       2 A-C-  <A href=#56>sec_2_</A>
+ 3   C  9  1   3  1 TFF      R       2 A-C-  <A href=#44>sec_3_</A>
+ 7   C  9  1   3  1 TFF      R       2 A-C-  <A href=#57>sec_4_</A>
+ 9   C  9  1   3  1 TFF      R       2 A-C-  <A href=#58>sec_5_</A>
+10   C  9  1   3  1 TFF      R       2 A-C-  <A href=#59>sec_6_</A>
+--------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
+<BR>
+<A name=55>N_297_0</A> = !( <A href=#30>m_0_.Q</A> & <A href=#31>m_1_.Q</A> & <A href=#32>m_2_.Q</A> & <A href=#46>clk_div_7_.Q</A>
+    # m_2_.Q & <A href=#34>m_3_.Q</A>
+    # m_1_.Q & m_3_.Q ) ; (3 pterms, 5 signals)
+
+<A name=33>N_298_i</A> = !( <A href=#38>h_0_.Q</A> & <A href=#39>h_1_.Q</A> & <A href=#40>h_2_.Q</A> & <A href=#46>clk_div_7_.Q</A>
+    # h_2_.Q & <A href=#41>h_3_.Q</A>
+    # h_1_.Q & h_3_.Q
+    # !<A href=#29>btn_SAFE</A> ) ; (4 pterms, 6 signals)
+
+<A name=60>clk_div_0_.D</A> = !<A href=#60>clk_div_0_.Q</A> ; (1 pterm, 1 signal)
+clk_div_0_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=49>clk_div_10_.T</A> = <A href=#45>clk_div_6_.Q</A> & <A href=#46>clk_div_7_.Q</A> & <A href=#47>clk_div_8_.Q</A> & <A href=#48>clk_div_9_.Q</A>
+       & <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A> & <A href=#63>clk_div_3_.Q</A>
+       & <A href=#64>clk_div_4_.Q</A> & <A href=#65>clk_div_5_.Q</A> ; (1 pterm, 10 signals)
+clk_div_10_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=50>clk_div_11_.T</A> = <A href=#45>clk_div_6_.Q</A> & <A href=#46>clk_div_7_.Q</A> & <A href=#47>clk_div_8_.Q</A> & <A href=#48>clk_div_9_.Q</A>
+       & <A href=#49>clk_div_10_.Q</A> & <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A>
+       & <A href=#63>clk_div_3_.Q</A> & <A href=#64>clk_div_4_.Q</A> & <A href=#65>clk_div_5_.Q</A> ; (1 pterm, 11 signals)
+clk_div_11_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=51>clk_div_12_.T</A> = <A href=#45>clk_div_6_.Q</A> & <A href=#46>clk_div_7_.Q</A> & <A href=#47>clk_div_8_.Q</A> & <A href=#48>clk_div_9_.Q</A>
+       & <A href=#49>clk_div_10_.Q</A> & <A href=#50>clk_div_11_.Q</A> & <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A>
+       & <A href=#62>clk_div_2_.Q</A> & <A href=#63>clk_div_3_.Q</A> & <A href=#64>clk_div_4_.Q</A> & <A href=#65>clk_div_5_.Q</A> ; (1 pterm, 12 signals)
+clk_div_12_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=52>clk_div_13_.T</A> = <A href=#45>clk_div_6_.Q</A> & <A href=#46>clk_div_7_.Q</A> & <A href=#47>clk_div_8_.Q</A> & <A href=#48>clk_div_9_.Q</A>
+       & <A href=#49>clk_div_10_.Q</A> & <A href=#50>clk_div_11_.Q</A> & <A href=#51>clk_div_12_.Q</A> & <A href=#60>clk_div_0_.Q</A>
+       & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A> & <A href=#63>clk_div_3_.Q</A> & <A href=#64>clk_div_4_.Q</A>
+       & <A href=#65>clk_div_5_.Q</A> ; (1 pterm, 13 signals)
+clk_div_13_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=61>clk_div_1_.D</A> = <A href=#60>clk_div_0_.Q</A> & !<A href=#61>clk_div_1_.Q</A>
+    # !clk_div_0_.Q & clk_div_1_.Q ; (2 pterms, 2 signals)
+clk_div_1_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=62>clk_div_2_.D</A> = <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A> & !<A href=#62>clk_div_2_.Q</A>
+    # !clk_div_1_.Q & clk_div_2_.Q
+    # !clk_div_0_.Q & clk_div_2_.Q ; (3 pterms, 3 signals)
+clk_div_2_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=63>clk_div_3_.D</A> = <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A> & !<A href=#63>clk_div_3_.Q</A>
+    # !clk_div_2_.Q & clk_div_3_.Q
+    # !clk_div_1_.Q & clk_div_3_.Q
+    # !clk_div_0_.Q & clk_div_3_.Q ; (4 pterms, 4 signals)
+clk_div_3_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=64>clk_div_4_.D.X1</A> = <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A> & <A href=#63>clk_div_3_.Q</A> ; (1 pterm, 4 signals)
+clk_div_4_.D.X2 = <A href=#64>clk_div_4_.Q</A> ; (1 pterm, 1 signal)
+clk_div_4_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=65>clk_div_5_.T</A> = <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A> & <A href=#63>clk_div_3_.Q</A>
+       & <A href=#64>clk_div_4_.Q</A> ; (1 pterm, 5 signals)
+clk_div_5_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=45>clk_div_6_.T</A> = <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A> & <A href=#63>clk_div_3_.Q</A>
+       & <A href=#64>clk_div_4_.Q</A> & <A href=#65>clk_div_5_.Q</A> ; (1 pterm, 6 signals)
+clk_div_6_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=46>clk_div_7_.T</A> = <A href=#45>clk_div_6_.Q</A> & <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A>
+       & <A href=#63>clk_div_3_.Q</A> & <A href=#64>clk_div_4_.Q</A> & <A href=#65>clk_div_5_.Q</A> ; (1 pterm, 7 signals)
+clk_div_7_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=47>clk_div_8_.T</A> = <A href=#45>clk_div_6_.Q</A> & <A href=#46>clk_div_7_.Q</A> & <A href=#60>clk_div_0_.Q</A> & <A href=#61>clk_div_1_.Q</A>
+       & <A href=#62>clk_div_2_.Q</A> & <A href=#63>clk_div_3_.Q</A> & <A href=#64>clk_div_4_.Q</A> & <A href=#65>clk_div_5_.Q</A> ; (1 pterm, 8 signals)
+clk_div_8_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=48>clk_div_9_.T</A> = <A href=#45>clk_div_6_.Q</A> & <A href=#46>clk_div_7_.Q</A> & <A href=#47>clk_div_8_.Q</A> & <A href=#60>clk_div_0_.Q</A>
+       & <A href=#61>clk_div_1_.Q</A> & <A href=#62>clk_div_2_.Q</A> & <A href=#63>clk_div_3_.Q</A> & <A href=#64>clk_div_4_.Q</A>
+       & <A href=#65>clk_div_5_.Q</A> ; (1 pterm, 9 signals)
+clk_div_9_.C = <A href=#6>clk</A> ; (1 pterm, 1 signal)
+
+<A name=38>h_0_.D</A> = !<A href=#38>h_0_.Q</A> ; (1 pterm, 1 signal)
+h_0_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+h_0_.CE = <A href=#68>h_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=68>h_0__0</A> = <A href=#26>btn_HH</A>
+    # <A href=#30>m_0_.Q</A> & !<A href=#31>m_1_.Q</A> & !<A href=#32>m_2_.Q</A> & <A href=#34>m_3_.Q</A> & <A href=#35>mm_0_.Q</A> & !<A href=#36>mm_1_.Q</A> & <A href=#37>mm_2_.Q</A>
+       & !<A href=#44>sec_3_.Q</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A> & <A href=#56>sec_2_.Q</A> & <A href=#57>sec_4_.Q</A> & <A href=#58>sec_5_.Q</A>
+       & <A href=#59>sec_6_.Q</A> ; (2 pterms, 15 signals)
+
+<A name=39>h_1_.D</A> = <A href=#38>h_0_.Q</A> & !<A href=#39>h_1_.Q</A> & <A href=#40>h_2_.Q</A>
+    # h_0_.Q & !h_1_.Q & !<A href=#41>h_3_.Q</A>
+    # !h_0_.Q & h_1_.Q ; (3 pterms, 4 signals)
+h_1_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+h_1_.CE = <A href=#68>h_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=40>h_2_.D</A> = !( !<A href=#40>h_2_.Q</A> & !<A href=#41>h_3_.Q</A> & !<A href=#42>hh_0_.Q</A> & <A href=#43>hh_1_.Q</A>
+    # <A href=#38>h_0_.Q</A> & <A href=#39>h_1_.Q</A> & h_2_.Q
+    # !h_1_.Q & !h_2_.Q
+    # !h_0_.Q & !h_2_.Q ) ; (4 pterms, 6 signals)
+h_2_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+h_2_.CE = <A href=#68>h_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=41>h_3_.D</A> = <A href=#38>h_0_.Q</A> & <A href=#39>h_1_.Q</A> & <A href=#40>h_2_.Q</A> & !<A href=#41>h_3_.Q</A>
+    # h_1_.Q & !h_2_.Q & h_3_.Q
+    # !h_1_.Q & h_2_.Q & h_3_.Q
+    # !h_0_.Q & h_3_.Q ; (4 pterms, 4 signals)
+h_3_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+h_3_.CE = <A href=#68>h_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=42>hh_0_.D</A> = !<A href=#39>h_1_.Q</A> & !<A href=#42>hh_0_.Q</A> ; (1 pterm, 2 signals)
+hh_0_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+hh_0_.CE = <A href=#69>hh_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=69>hh_0__0</A> = <A href=#26>btn_HH</A> & <A href=#38>h_0_.Q</A> & !<A href=#39>h_1_.Q</A> & !<A href=#40>h_2_.Q</A> & <A href=#41>h_3_.Q</A>
+    # btn_HH & h_0_.Q & h_1_.Q & !h_2_.Q & !h_3_.Q & !<A href=#42>hh_0_.Q</A> & <A href=#43>hh_1_.Q</A>
+    # <A href=#30>m_0_.Q</A> & !<A href=#31>m_1_.Q</A> & !<A href=#32>m_2_.Q</A> & <A href=#34>m_3_.Q</A> & <A href=#35>mm_0_.Q</A> & !<A href=#36>mm_1_.Q</A> & <A href=#37>mm_2_.Q</A>
+       & h_0_.Q & !h_1_.Q & !h_2_.Q & h_3_.Q & !<A href=#44>sec_3_.Q</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A>
+       & <A href=#56>sec_2_.Q</A> & <A href=#57>sec_4_.Q</A> & <A href=#58>sec_5_.Q</A> & <A href=#59>sec_6_.Q</A>
+    # m_0_.Q & !m_1_.Q & !m_2_.Q & m_3_.Q & mm_0_.Q & !mm_1_.Q & mm_2_.Q
+       & h_0_.Q & h_1_.Q & !h_2_.Q & !h_3_.Q & !hh_0_.Q & hh_1_.Q & !sec_3_.Q
+       & sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & sec_5_.Q & sec_6_.Q ; (4 pterms, 21 signals)
+
+<A name=43>hh_1_.D</A> = !<A href=#39>h_1_.Q</A> & <A href=#42>hh_0_.Q</A> & !<A href=#43>hh_1_.Q</A>
+    # !h_1_.Q & !hh_0_.Q & hh_1_.Q ; (2 pterms, 3 signals)
+hh_1_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+hh_1_.CE = <A href=#69>hh_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=15>led10</A> = !( !<A href=#39>h_1_.Q</A> & !<A href=#40>h_2_.Q</A> & !<A href=#41>h_3_.Q</A> & <A href=#46>clk_div_7_.Q</A>
+    # !<A href=#38>h_0_.Q</A> & h_1_.Q & h_2_.Q & !clk_div_7_.Q
+    # h_0_.Q & !h_1_.Q & h_2_.Q & !clk_div_7_.Q
+    # !<A href=#33>N_298_i</A> ) ; (4 pterms, 6 signals)
+
+<A name=16>led12</A> = !( <A href=#38>h_0_.Q</A> & !<A href=#39>h_1_.Q</A> & !<A href=#40>h_2_.Q</A> & !<A href=#41>h_3_.Q</A> & <A href=#46>clk_div_7_.Q</A>
+    # !h_0_.Q & h_1_.Q & !h_2_.Q & !clk_div_7_.Q
+    # !h_0_.Q & !h_1_.Q & h_2_.Q & clk_div_7_.Q
+    # !<A href=#33>N_298_i</A> ) ; (4 pterms, 6 signals)
+
+<A name=17>led13</A> = <A href=#29>btn_SAFE</A> & !<A href=#38>h_0_.Q</A> & <A href=#40>h_2_.Q</A> & !<A href=#41>h_3_.Q</A> & <A href=#46>clk_div_7_.Q</A>
+    # btn_SAFE & !h_0_.Q & !<A href=#39>h_1_.Q</A> & !h_2_.Q
+    # btn_SAFE & h_0_.Q & !h_1_.Q & h_2_.Q & !h_3_.Q
+    # btn_SAFE & !h_1_.Q & !h_2_.Q & h_3_.Q
+    # btn_SAFE & h_1_.Q & !h_3_.Q & !clk_div_7_.Q ; (5 pterms, 6 signals)
+
+<A name=18>led15</A> = <A href=#29>btn_SAFE</A> & !<A href=#35>mm_0_.Q</A> & !<A href=#37>mm_2_.Q</A> & <A href=#46>clk_div_7_.Q</A>
+    # btn_SAFE & !mm_0_.Q & !<A href=#36>mm_1_.Q</A> & !clk_div_7_.Q
+    # btn_SAFE & mm_0_.Q & !mm_1_.Q & mm_2_.Q
+    # btn_SAFE & mm_1_.Q & !mm_2_.Q & clk_div_7_.Q ; (4 pterms, 5 signals)
+
+<A name=19>led16</A> = <A href=#29>btn_SAFE</A> & !<A href=#35>mm_0_.Q</A> & !<A href=#36>mm_1_.Q</A> & <A href=#46>clk_div_7_.Q</A>
+    # btn_SAFE & mm_1_.Q & !<A href=#37>mm_2_.Q</A>
+    # btn_SAFE & !mm_1_.Q & mm_2_.Q & !clk_div_7_.Q
+    # btn_SAFE & !mm_2_.Q & clk_div_7_.Q ; (4 pterms, 5 signals)
+
+<A name=20>led17</A> = <A href=#29>btn_SAFE</A> & !<A href=#35>mm_0_.Q</A> & !<A href=#37>mm_2_.Q</A> & !<A href=#46>clk_div_7_.Q</A>
+    # btn_SAFE & mm_0_.Q & <A href=#36>mm_1_.Q</A> & !mm_2_.Q
+    # btn_SAFE & mm_0_.Q & !mm_1_.Q & mm_2_.Q
+    # btn_SAFE & !mm_1_.Q & clk_div_7_.Q ; (4 pterms, 5 signals)
+
+<A name=21>led18</A> = <A href=#29>btn_SAFE</A> & !<A href=#35>mm_0_.Q</A> & !<A href=#37>mm_2_.Q</A> & !<A href=#46>clk_div_7_.Q</A>
+    # btn_SAFE & !<A href=#30>m_0_.Q</A> & <A href=#31>m_1_.Q</A> & !<A href=#34>m_3_.Q</A> & clk_div_7_.Q
+    # btn_SAFE & !m_0_.Q & !m_1_.Q & !<A href=#32>m_2_.Q</A> & clk_div_7_.Q ; (3 pterms, 8 signals)
+
+<A name=22>led19.X1</A> = <A href=#29>btn_SAFE</A> & !<A href=#31>m_1_.Q</A> & !<A href=#32>m_2_.Q</A> & !<A href=#34>m_3_.Q</A> & <A href=#46>clk_div_7_.Q</A> & <A href=#55>N_297_0</A>
+    # btn_SAFE & <A href=#30>m_0_.Q</A> & !m_1_.Q & m_2_.Q & !clk_div_7_.Q & N_297_0
+    # btn_SAFE & !m_0_.Q & m_1_.Q & m_2_.Q & !clk_div_7_.Q & N_297_0 ; (3 pterms, 7 signals)
+led19.X2 = <A href=#29>btn_SAFE</A> & <A href=#55>N_297_0</A> ; (1 pterm, 2 signals)
+
+<A name=23>led20.X1</A> = <A href=#29>btn_SAFE</A> & !<A href=#30>m_0_.Q</A> & !<A href=#31>m_1_.Q</A> & <A href=#32>m_2_.Q</A> & <A href=#46>clk_div_7_.Q</A> & <A href=#55>N_297_0</A>
+    # btn_SAFE & !m_0_.Q & m_1_.Q & !m_2_.Q & !clk_div_7_.Q & N_297_0
+    # btn_SAFE & m_0_.Q & !m_1_.Q & !m_2_.Q & !<A href=#34>m_3_.Q</A> & clk_div_7_.Q & N_297_0 ; (3 pterms, 7 signals)
+led20.X2 = <A href=#29>btn_SAFE</A> & <A href=#55>N_297_0</A> ; (1 pterm, 2 signals)
+
+<A name=24>led21</A> = <A href=#29>btn_SAFE</A> & !<A href=#30>m_0_.Q</A> & <A href=#32>m_2_.Q</A> & !<A href=#34>m_3_.Q</A> & <A href=#46>clk_div_7_.Q</A>
+    # btn_SAFE & !m_0_.Q & !<A href=#31>m_1_.Q</A> & !m_2_.Q
+    # btn_SAFE & m_0_.Q & !m_1_.Q & m_2_.Q & !m_3_.Q
+    # btn_SAFE & !m_1_.Q & !m_2_.Q & m_3_.Q
+    # btn_SAFE & m_1_.Q & !m_3_.Q & !clk_div_7_.Q ; (5 pterms, 6 signals)
+
+<A name=11>led6</A> = <A href=#29>btn_SAFE</A> & <A href=#42>hh_0_.Q</A> & !<A href=#43>hh_1_.Q</A>
+    # btn_SAFE & !hh_0_.Q & hh_1_.Q ; (2 pterms, 3 signals)
+
+<A name=12>led7</A> = <A href=#29>btn_SAFE</A> & !<A href=#42>hh_0_.Q</A> & <A href=#43>hh_1_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=13>led8</A> = <A href=#29>btn_SAFE</A> & !<A href=#42>hh_0_.Q</A> & <A href=#43>hh_1_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=14>led9</A> = <A href=#29>btn_SAFE</A> & <A href=#42>hh_0_.Q</A> & !<A href=#43>hh_1_.Q</A> & !<A href=#46>clk_div_7_.Q</A>
+    # btn_SAFE & !<A href=#38>h_0_.Q</A> & <A href=#39>h_1_.Q</A> & !<A href=#41>h_3_.Q</A> & clk_div_7_.Q
+    # btn_SAFE & !h_0_.Q & !h_1_.Q & !<A href=#40>h_2_.Q</A> & clk_div_7_.Q ; (3 pterms, 8 signals)
+
+<A name=9>led_gnd1</A> = !( <A href=#29>btn_SAFE</A> & !<A href=#46>clk_div_7_.Q</A> ) ; (1 pterm, 2 signals)
+
+<A name=10>led_gnd2</A> = <A href=#29>btn_SAFE</A> & !<A href=#46>clk_div_7_.Q</A> ; (1 pterm, 2 signals)
+
+<A name=25>led_second_tick</A> = !<A href=#45>clk_div_6_.Q</A> & !<A href=#46>clk_div_7_.Q</A> & !<A href=#47>clk_div_8_.Q</A>
+       & !<A href=#48>clk_div_9_.Q</A> & !<A href=#49>clk_div_10_.Q</A> & !<A href=#50>clk_div_11_.Q</A> & !<A href=#51>clk_div_12_.Q</A>
+       & !<A href=#52>clk_div_13_.Q</A> & <A href=#53>sec_0_.Q</A>
+    # <A href=#29>btn_SAFE</A> & sec_0_.Q ; (2 pterms, 10 signals)
+
+<A name=30>m_0_.D</A> = !<A href=#30>m_0_.Q</A> ; (1 pterm, 1 signal)
+m_0_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+m_0_.CE = <A href=#66>m_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=66>m_0__0</A> = <A href=#27>btn_MM</A>
+    # !<A href=#44>sec_3_.Q</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A> & <A href=#56>sec_2_.Q</A> & <A href=#57>sec_4_.Q</A> & <A href=#58>sec_5_.Q</A>
+       & <A href=#59>sec_6_.Q</A> ; (2 pterms, 8 signals)
+
+<A name=31>m_1_.D</A> = <A href=#30>m_0_.Q</A> & !<A href=#31>m_1_.Q</A> & <A href=#32>m_2_.Q</A>
+    # m_0_.Q & !m_1_.Q & !<A href=#34>m_3_.Q</A>
+    # !m_0_.Q & m_1_.Q ; (3 pterms, 4 signals)
+m_1_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+m_1_.CE = <A href=#66>m_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=32>m_2_.D</A> = <A href=#30>m_0_.Q</A> & <A href=#31>m_1_.Q</A> & !<A href=#32>m_2_.Q</A>
+    # !m_1_.Q & m_2_.Q
+    # !m_0_.Q & m_2_.Q ; (3 pterms, 3 signals)
+m_2_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+m_2_.CE = <A href=#66>m_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=34>m_3_.D</A> = <A href=#30>m_0_.Q</A> & <A href=#31>m_1_.Q</A> & <A href=#32>m_2_.Q</A> & !<A href=#34>m_3_.Q</A>
+    # m_1_.Q & !m_2_.Q & m_3_.Q
+    # !m_1_.Q & m_2_.Q & m_3_.Q
+    # !m_0_.Q & m_3_.Q ; (4 pterms, 4 signals)
+m_3_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+m_3_.CE = <A href=#66>m_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=35>mm_0_.D</A> = !<A href=#35>mm_0_.Q</A> ; (1 pterm, 1 signal)
+mm_0_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+mm_0_.CE = <A href=#67>mm_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=67>mm_0__0</A> = <A href=#27>btn_MM</A> & <A href=#30>m_0_.Q</A> & !<A href=#31>m_1_.Q</A> & !<A href=#32>m_2_.Q</A> & <A href=#34>m_3_.Q</A>
+    # m_0_.Q & !m_1_.Q & !m_2_.Q & m_3_.Q & !<A href=#44>sec_3_.Q</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A>
+       & <A href=#56>sec_2_.Q</A> & <A href=#57>sec_4_.Q</A> & <A href=#58>sec_5_.Q</A> & <A href=#59>sec_6_.Q</A> ; (2 pterms, 12 signals)
+
+<A name=36>mm_1_.D</A> = <A href=#35>mm_0_.Q</A> & !<A href=#36>mm_1_.Q</A> & !<A href=#37>mm_2_.Q</A>
+    # !mm_0_.Q & mm_1_.Q ; (2 pterms, 3 signals)
+mm_1_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+mm_1_.CE = <A href=#67>mm_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=37>mm_2_.D</A> = <A href=#35>mm_0_.Q</A> & <A href=#36>mm_1_.Q</A> & !<A href=#37>mm_2_.Q</A>
+    # !mm_0_.Q & mm_2_.Q ; (2 pterms, 3 signals)
+mm_2_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+mm_2_.CE = <A href=#67>mm_0__0</A> ; (1 pterm, 1 signal)
+
+<A name=8>out_clk</A> = !<A href=#7>in_clk</A> ; (1 pterm, 1 signal)
+
+<A name=53>sec_0_.D</A> = !<A href=#28>btn_SS</A> & !<A href=#53>sec_0_.Q</A> ; (1 pterm, 2 signals)
+sec_0_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+
+<A name=54>sec_1_.D</A> = !<A href=#28>btn_SS</A> & <A href=#53>sec_0_.Q</A> & !<A href=#54>sec_1_.Q</A>
+    # !btn_SS & !sec_0_.Q & sec_1_.Q ; (2 pterms, 3 signals)
+sec_1_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+
+<A name=56>sec_2_.D</A> = !<A href=#28>btn_SS</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A> & !<A href=#56>sec_2_.Q</A>
+    # !btn_SS & !sec_1_.Q & sec_2_.Q
+    # !btn_SS & !sec_0_.Q & sec_2_.Q ; (3 pterms, 4 signals)
+sec_2_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+
+<A name=44>sec_3_.T.X1</A> = <A href=#28>btn_SS</A> & <A href=#44>sec_3_.Q</A>
+    # !btn_SS & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A> & <A href=#56>sec_2_.Q</A> ; (2 pterms, 5 signals)
+sec_3_.T.X2 = !<A href=#28>btn_SS</A> & !<A href=#44>sec_3_.Q</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A> & <A href=#56>sec_2_.Q</A> & <A href=#57>sec_4_.Q</A>
+       & <A href=#58>sec_5_.Q</A> & <A href=#59>sec_6_.Q</A> ; (1 pterm, 8 signals)
+sec_3_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+
+<A name=57>sec_4_.T</A> = !<A href=#28>btn_SS</A> & <A href=#44>sec_3_.Q</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A> & <A href=#56>sec_2_.Q</A>
+    # sec_0_.Q & sec_1_.Q & sec_2_.Q & <A href=#57>sec_4_.Q</A> & <A href=#58>sec_5_.Q</A> & <A href=#59>sec_6_.Q</A>
+    # btn_SS & sec_4_.Q ; (3 pterms, 8 signals)
+sec_4_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+
+<A name=58>sec_5_.T</A> = !<A href=#28>btn_SS</A> & <A href=#44>sec_3_.Q</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A> & <A href=#56>sec_2_.Q</A> & <A href=#57>sec_4_.Q</A>
+    # sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & <A href=#58>sec_5_.Q</A> & <A href=#59>sec_6_.Q</A>
+    # btn_SS & sec_5_.Q ; (3 pterms, 8 signals)
+sec_5_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+
+<A name=59>sec_6_.T</A> = !<A href=#28>btn_SS</A> & <A href=#44>sec_3_.Q</A> & <A href=#53>sec_0_.Q</A> & <A href=#54>sec_1_.Q</A> & <A href=#56>sec_2_.Q</A> & <A href=#57>sec_4_.Q</A>
+       & <A href=#58>sec_5_.Q</A>
+    # sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & sec_5_.Q & <A href=#59>sec_6_.Q</A>
+    # btn_SS & sec_6_.Q ; (3 pterms, 8 signals)
+sec_6_.C = <A href=#52>clk_div_13_.Q</A> ; (1 pterm, 1 signal)
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+

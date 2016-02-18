@@ -1,0 +1,2 @@
+@W: CG532 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":19:20:19:26|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
+

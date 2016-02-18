@@ -1,0 +1,185 @@
+
+[Device]
+Family = lc4k;
+PartNumber = LC4064V-75T44C;
+Package = 44TQFP;
+PartType = LC4064V;
+Speed = -7.5;
+Operating_condition = COM;
+Status = Production;
+EN_PinGLB = yes;
+EN_PinMacrocell = yes;
+
+[Revision]
+Parent = lc4k64v.lci;
+DATE = 02/02/2016;
+TIME = 21:33:11;
+Source_Format = Pure_Verilog_HDL;
+Synthesis = Synplify;
+
+[Ignore Assignments]
+
+[Clear Assignments]
+
+[Backannotate Assignments]
+
+[Global Constraints]
+Balanced_partitioning = No;
+
+[Location Assignments]
+layer = OFF;
+led_gnd1 = Pin, 44, -, A, 8;
+led_gnd2 = Pin, 43, -, A, 6;
+led6 = Pin, 42, -, A, 4;
+led7 = Pin, 41, -, A, 2;
+led8 = Pin, 40, -, A, 0;
+led9 = Pin, 38, -, D, 14;
+clk = Pin, 39, -, -, -;
+led10 = Pin, 37, -, D, 12;
+led12 = Pin, 36, -, D, 10;
+led13 = Pin, 35, -, D, 8;
+led15 = Pin, 31, -, D, 4;
+led16 = Pin, 30, -, D, 2;
+led17 = Pin, 29, -, D, 0;
+led18 = Pin, 26, -, C, 14;
+led19 = Pin, 25, -, C, 12;
+led20 = Pin, 24, -, C, 10;
+led21 = Pin, 22, -, C, 8;
+led_second_tick = Pin, 21, -, C, 6;
+btn_HH = Pin, 20, -, C, 4;
+btn_MM = Pin, 19, -, C, 2;
+btn_SS = Pin, 18, -, C, 0;
+btn_SAFE = Pin, 17, -, -, -;
+out_clk = Pin, 13, -, B, 8;
+in_clk = Pin, 14, -, B, 10;
+
+[Group Assignments]
+layer = OFF;
+
+[Resource Reservations]
+layer = OFF;
+
+[Fitter Report Format]
+
+[Power]
+
+[Source Constraint Option]
+
+[Fast Bypass]
+NONE = out_clk;
+
+[OSM Bypass]
+
+[Input Registers]
+
+[Netlist/Delay Format]
+NetList = VERILOG;
+
+[IO Types]
+layer = OFF;
+led_gnd1 = LVCMOS33, PIN, 0, -;
+led_gnd2 = LVCMOS33, PIN, 0, -;
+led6 = LVCMOS33, PIN, 0, -;
+led7 = LVCMOS33, PIN, 0, -;
+led8 = LVCMOS33, PIN, 0, -;
+led9 = LVCMOS33, PIN, 1, -;
+led10 = LVCMOS33, PIN, 1, -;
+led12 = LVCMOS33, PIN, 1, -;
+led13 = LVCMOS33, PIN, 1, -;
+led15 = LVCMOS33, PIN, 1, -;
+led16 = LVCMOS33, PIN, 1, -;
+led17 = LVCMOS33, PIN, 1, -;
+led18 = LVCMOS33, PIN, 1, -;
+led19 = LVCMOS33, PIN, 1, -;
+led20 = LVCMOS33, PIN, 1, -;
+led21 = LVCMOS33, PIN, 1, -;
+led_second_tick = LVCMOS33, PIN, 1, -;
+clk = LVCMOS33, PIN, 0, -;
+btn_HH = LVCMOS33, PIN, 1, -;
+btn_MM = LVCMOS33, PIN, 1, -;
+btn_SS = LVCMOS33, PIN, 1, -;
+btn_SAFE = LVCMOS33, PIN, 1, -;
+out_clk = LVCMOS33, PIN, 0, -;
+in_clk = LVCMOS33, PIN, 0, -;
+
+[Pullup]
+Default = DOWN;
+
+[Slewrate]
+SLOW = led_gnd1, led_gnd2, led6, led7, led8, led9, led10, led12, led13, led15, 
+	led16, led17, led18, led19, led20, led21, led_second_tick, out_clk;
+
+[Region]
+
+[Timing Constraints]
+layer = OFF;
+
+[HSI Attributes]
+
+[Input Delay]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[Pin attributes list]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[pin lock limitation]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Attributes list setting]
+
+[Timing Analyzer]
+
+[PLL Assignments]
+
+[Dual Function Macrocell]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[ORP Bypass]
+NONE = out_clk;
+
+[Register Powerup]
+NONE = led_gnd1, led_gnd2, led6, led7, led8, led9;
+SET = out_clk;
+
+[Constraint Version]
+version = 1.0;
+
+[ORP ASSIGNMENTS]
+layer = OFF;
+
+[Node attribute]
+layer = OFF;
+
+[SYMBOL/MODULE attribute]
+layer = OFF;
+
+[Nodal Constraints]
+layer = OFF;

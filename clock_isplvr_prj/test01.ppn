@@ -1,0 +1,38 @@
+//
+// Software Version :  ispLEVER Classic 2.0.00.17.20.15  
+// Project Name	    :  test01
+// Targeted Device  :  LC4064V-75T44C
+// Date             :  Thu Feb 18 09:40:41 2016
+//
+                   GNDIO0          SYS           5
+                   VCCIO0          SYS           6
+                      VCC          SYS           11
+                      GND          SYS           12
+                  out_clk          OUT           13
+                   in_clk          IN            14
+                 btn_SAFE          IN            17
+                   btn_SS          IN            18
+                   btn_MM          IN            19
+                   btn_HH          IN            20
+          led_second_tick          OUT           21
+                    led21          OUT           22
+                    led20          OUT           24
+                    led19          OUT           25
+                    led18          OUT           26
+                   GNDIO1          SYS           27
+                   VCCIO1          SYS           28
+                    led17          OUT           29
+                    led16          OUT           30
+                    led15          OUT           31
+                      VCC          SYS           33
+                      GND          SYS           34
+                    led13          OUT           35
+                    led12          OUT           36
+                    led10          OUT           37
+                     led9          OUT           38
+                      clk          IN            39
+                     led8          OUT           40
+                     led7          OUT           41
+                     led6          OUT           42
+                 led_gnd2          OUT           43
+                 led_gnd1          OUT           44

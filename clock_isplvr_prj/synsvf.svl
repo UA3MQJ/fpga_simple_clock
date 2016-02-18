@@ -1,0 +1,4 @@
+Part Number: LC4064V-75T44C
+D:\lscc\ispLEVER_Classic2_0\ispvmsystem/ispufw -dev LC4064V-XXT44 -if test01.jed -oft -isc -lever
+Invoke process : D:\lscc\ispLEVER_Classic2_0\ispvmsystem/ispufw -dev LC4064V-XXT44 -if test01.jed -oft -isc -lever
+ISC file is generated successfully

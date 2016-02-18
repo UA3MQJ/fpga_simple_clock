@@ -1,0 +1,59 @@
+ ispLEVER Classic 2.0.00.17.20.15 Linked Equations File
+Copyright(C), 1992-2015, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design test01 created  Mon Jan 18 21:31:14 2016
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   4          4        1    Pin   leds_3_.D 
+   1/1        1        1    Pin   leds_3_.C 
+   3          3        1    Pin   leds_2_.D 
+   1/1        1        1    Pin   leds_2_.C 
+   2          2        1    Pin   leds_1_.D 
+   1/1        1        1    Pin   leds_1_.C 
+   1          1        1    Pin   leds_0_.D 
+   1/1        1        1    Pin   leds_0_.C 
+=========
+  14/4          Best P-Term Total: 14
+                       Total Pins: 5
+                      Total Nodes: 0
+            Average P-Term/Output: 2
+
+
+Equations:
+
+leds_3_.D = (leds_0_.Q & leds_1_.Q & leds_2_.Q & !leds_3_.Q
+     # !leds_2_.Q & leds_3_.Q
+     # !leds_1_.Q & leds_3_.Q
+     # !leds_0_.Q & leds_3_.Q);
+
+leds_3_.C = (btn);
+
+leds_2_.D = (leds_0_.Q & leds_1_.Q & !leds_2_.Q
+     # !leds_1_.Q & leds_2_.Q
+     # !leds_0_.Q & leds_2_.Q);
+
+leds_2_.C = (btn);
+
+leds_1_.D = (leds_0_.Q & !leds_1_.Q
+     # !leds_0_.Q & leds_1_.Q);
+
+leds_1_.C = (btn);
+
+leds_0_.D = (!leds_0_.Q);
+
+leds_0_.C = (btn);
+
+
+Reverse-Polarity Equations:
+
+!leds_3_.C = (!btn);
+
+!leds_2_.C = (!btn);
+
+!leds_1_.C = (!btn);
+
+!leds_0_.C = (!btn);
+

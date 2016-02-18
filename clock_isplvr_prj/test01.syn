@@ -1,0 +1,21 @@
+JDF B
+// Created by Version 2.0 
+PROJECT test01
+DESIGN test01 Normal
+DEVKIT LC4064V-75T44C
+ENTRY Pure Verilog HDL
+MODULE bcd2seg0_2.v
+MODSTYLE bcd2seg0_2 Normal
+MODULE bcd2seg0_5.v
+MODSTYLE bcd2seg0_5 Normal
+MODULE bcd2seg0_9.v
+MODSTYLE bcd2seg0_9 Normal
+MODULE pu_reset.v
+MODSTYLE pu_reset Normal
+MODULE cntr.v
+MODSTYLE cntr Normal
+MODULE test01.v
+MODSTYLE test01 Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE test01

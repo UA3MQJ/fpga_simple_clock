@@ -1,0 +1,61 @@
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\lscc\ispLEVER_Classic2_0\synpbase
+#OS: Windows 7 6.1
+#Hostname: SEA-NOTE
+
+#Implementation: clock_isplvr_prj
+
+$ Start of Compile
+#Thu Feb 18 09:40:34 2016
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"D:\lscc\ispLEVER_Classic2_0\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\lscc\ispLEVER_Classic2_0\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\lscc\ispLEVER_Classic2_0\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\lscc\ispLEVER_Classic2_0\synpbase\lib\vlog\hypermods.v"
+@I::"D:\lscc\ispLEVER_Classic2_0\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.h"
+@I::"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_2.v"
+@I::"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_9.v"
+@I::"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_5.v"
+@I::"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v"
+Verilog syntax check successful!
+File D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_2.v changed - recompiling
+File D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_9.v changed - recompiling
+File D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_5.v changed - recompiling
+File D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v changed - recompiling
+Selecting top level module test01
+@N: CG364 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_9.v":2:7:2:16|Synthesizing module bcd2seg0_9
+
+@N: CG364 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_5.v":2:7:2:16|Synthesizing module bcd2seg0_5
+
+@N: CG364 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_2.v":2:7:2:16|Synthesizing module bcd2seg0_2
+
+@N: CG364 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":1:7:1:12|Synthesizing module test01
+
+@W: CG532 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":19:20:19:26|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
+@N: CG179 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":52:66:52:66|Removing redundant assignment
+@N: CG179 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":53:66:53:67|Removing redundant assignment
+@N: CG179 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":54:66:54:66|Removing redundant assignment
+@N: CG179 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":55:66:55:67|Removing redundant assignment
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 70MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Feb 18 09:40:34 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+File D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synwork\test01_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Feb 18 09:40:35 2016
+
+###########################################################]

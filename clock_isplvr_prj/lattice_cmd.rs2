@@ -1,0 +1,1 @@
+-nodal -src test01.bl5 -type BLIF -presrc test01.bl3 -crf test01.crf -sif test01.sif -devfile "D:/lscc/ispLEVER_Classic2_0/ispcpld/dat/lc4k/m4s_64_30.dev" -lci test01.lct

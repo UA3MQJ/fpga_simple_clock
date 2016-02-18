@@ -1,0 +1,4 @@
+clk  i
+res  i
+en  i
+cy  o

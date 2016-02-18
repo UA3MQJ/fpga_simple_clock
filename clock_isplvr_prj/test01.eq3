@@ -1,0 +1,281 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 2.0.00.17.20.15 Equations File            -|
+|- Copyright(C), 1992-2012, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+N_297_0 = !( m_0_.Q & m_1_.Q & m_2_.Q & clk_div_7_.Q
+    # m_2_.Q & m_3_.Q
+    # m_1_.Q & m_3_.Q ) ; (3 pterms, 5 signals)
+
+N_298_i = !( h_0_.Q & h_1_.Q & h_2_.Q & clk_div_7_.Q
+    # h_2_.Q & h_3_.Q
+    # h_1_.Q & h_3_.Q
+    # !btn_SAFE ) ; (4 pterms, 6 signals)
+
+clk_div_0_.D = !clk_div_0_.Q ; (1 pterm, 1 signal)
+clk_div_0_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_10_.T = clk_div_6_.Q & clk_div_7_.Q & clk_div_8_.Q & clk_div_9_.Q
+       & clk_div_0_.Q & clk_div_1_.Q & clk_div_2_.Q & clk_div_3_.Q
+       & clk_div_4_.Q & clk_div_5_.Q ; (1 pterm, 10 signals)
+clk_div_10_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_11_.T = clk_div_6_.Q & clk_div_7_.Q & clk_div_8_.Q & clk_div_9_.Q
+       & clk_div_10_.Q & clk_div_0_.Q & clk_div_1_.Q & clk_div_2_.Q
+       & clk_div_3_.Q & clk_div_4_.Q & clk_div_5_.Q ; (1 pterm, 11 signals)
+clk_div_11_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_12_.T = clk_div_6_.Q & clk_div_7_.Q & clk_div_8_.Q & clk_div_9_.Q
+       & clk_div_10_.Q & clk_div_11_.Q & clk_div_0_.Q & clk_div_1_.Q
+       & clk_div_2_.Q & clk_div_3_.Q & clk_div_4_.Q & clk_div_5_.Q ; (1 pterm, 12 signals)
+clk_div_12_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_13_.T = clk_div_6_.Q & clk_div_7_.Q & clk_div_8_.Q & clk_div_9_.Q
+       & clk_div_10_.Q & clk_div_11_.Q & clk_div_12_.Q & clk_div_0_.Q
+       & clk_div_1_.Q & clk_div_2_.Q & clk_div_3_.Q & clk_div_4_.Q
+       & clk_div_5_.Q ; (1 pterm, 13 signals)
+clk_div_13_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_1_.D = clk_div_0_.Q & !clk_div_1_.Q
+    # !clk_div_0_.Q & clk_div_1_.Q ; (2 pterms, 2 signals)
+clk_div_1_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_2_.D = clk_div_0_.Q & clk_div_1_.Q & !clk_div_2_.Q
+    # !clk_div_1_.Q & clk_div_2_.Q
+    # !clk_div_0_.Q & clk_div_2_.Q ; (3 pterms, 3 signals)
+clk_div_2_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_3_.D = clk_div_0_.Q & clk_div_1_.Q & clk_div_2_.Q & !clk_div_3_.Q
+    # !clk_div_2_.Q & clk_div_3_.Q
+    # !clk_div_1_.Q & clk_div_3_.Q
+    # !clk_div_0_.Q & clk_div_3_.Q ; (4 pterms, 4 signals)
+clk_div_3_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_4_.D.X1 = clk_div_0_.Q & clk_div_1_.Q & clk_div_2_.Q & clk_div_3_.Q ; (1 pterm, 4 signals)
+clk_div_4_.D.X2 = clk_div_4_.Q ; (1 pterm, 1 signal)
+clk_div_4_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_5_.T = clk_div_0_.Q & clk_div_1_.Q & clk_div_2_.Q & clk_div_3_.Q
+       & clk_div_4_.Q ; (1 pterm, 5 signals)
+clk_div_5_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_6_.T = clk_div_0_.Q & clk_div_1_.Q & clk_div_2_.Q & clk_div_3_.Q
+       & clk_div_4_.Q & clk_div_5_.Q ; (1 pterm, 6 signals)
+clk_div_6_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_7_.T = clk_div_6_.Q & clk_div_0_.Q & clk_div_1_.Q & clk_div_2_.Q
+       & clk_div_3_.Q & clk_div_4_.Q & clk_div_5_.Q ; (1 pterm, 7 signals)
+clk_div_7_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_8_.T = clk_div_6_.Q & clk_div_7_.Q & clk_div_0_.Q & clk_div_1_.Q
+       & clk_div_2_.Q & clk_div_3_.Q & clk_div_4_.Q & clk_div_5_.Q ; (1 pterm, 8 signals)
+clk_div_8_.C = clk ; (1 pterm, 1 signal)
+
+clk_div_9_.T = clk_div_6_.Q & clk_div_7_.Q & clk_div_8_.Q & clk_div_0_.Q
+       & clk_div_1_.Q & clk_div_2_.Q & clk_div_3_.Q & clk_div_4_.Q
+       & clk_div_5_.Q ; (1 pterm, 9 signals)
+clk_div_9_.C = clk ; (1 pterm, 1 signal)
+
+h_0_.D = !h_0_.Q ; (1 pterm, 1 signal)
+h_0_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+h_0_.CE = h_0__0 ; (1 pterm, 1 signal)
+
+h_0__0 = btn_HH
+    # m_0_.Q & !m_1_.Q & !m_2_.Q & m_3_.Q & mm_0_.Q & !mm_1_.Q & mm_2_.Q
+       & !sec_3_.Q & sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & sec_5_.Q
+       & sec_6_.Q ; (2 pterms, 15 signals)
+
+h_1_.D = h_0_.Q & !h_1_.Q & h_2_.Q
+    # h_0_.Q & !h_1_.Q & !h_3_.Q
+    # !h_0_.Q & h_1_.Q ; (3 pterms, 4 signals)
+h_1_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+h_1_.CE = h_0__0 ; (1 pterm, 1 signal)
+
+h_2_.D = !( !h_2_.Q & !h_3_.Q & !hh_0_.Q & hh_1_.Q
+    # h_0_.Q & h_1_.Q & h_2_.Q
+    # !h_1_.Q & !h_2_.Q
+    # !h_0_.Q & !h_2_.Q ) ; (4 pterms, 6 signals)
+h_2_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+h_2_.CE = h_0__0 ; (1 pterm, 1 signal)
+
+h_3_.D = h_0_.Q & h_1_.Q & h_2_.Q & !h_3_.Q
+    # h_1_.Q & !h_2_.Q & h_3_.Q
+    # !h_1_.Q & h_2_.Q & h_3_.Q
+    # !h_0_.Q & h_3_.Q ; (4 pterms, 4 signals)
+h_3_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+h_3_.CE = h_0__0 ; (1 pterm, 1 signal)
+
+hh_0_.D = !h_1_.Q & !hh_0_.Q ; (1 pterm, 2 signals)
+hh_0_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+hh_0_.CE = hh_0__0 ; (1 pterm, 1 signal)
+
+hh_0__0 = btn_HH & h_0_.Q & !h_1_.Q & !h_2_.Q & h_3_.Q
+    # btn_HH & h_0_.Q & h_1_.Q & !h_2_.Q & !h_3_.Q & !hh_0_.Q & hh_1_.Q
+    # m_0_.Q & !m_1_.Q & !m_2_.Q & m_3_.Q & mm_0_.Q & !mm_1_.Q & mm_2_.Q
+       & h_0_.Q & !h_1_.Q & !h_2_.Q & h_3_.Q & !sec_3_.Q & sec_0_.Q & sec_1_.Q
+       & sec_2_.Q & sec_4_.Q & sec_5_.Q & sec_6_.Q
+    # m_0_.Q & !m_1_.Q & !m_2_.Q & m_3_.Q & mm_0_.Q & !mm_1_.Q & mm_2_.Q
+       & h_0_.Q & h_1_.Q & !h_2_.Q & !h_3_.Q & !hh_0_.Q & hh_1_.Q & !sec_3_.Q
+       & sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & sec_5_.Q & sec_6_.Q ; (4 pterms, 21 signals)
+
+hh_1_.D = !h_1_.Q & hh_0_.Q & !hh_1_.Q
+    # !h_1_.Q & !hh_0_.Q & hh_1_.Q ; (2 pterms, 3 signals)
+hh_1_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+hh_1_.CE = hh_0__0 ; (1 pterm, 1 signal)
+
+led10 = !( !h_1_.Q & !h_2_.Q & !h_3_.Q & clk_div_7_.Q
+    # !h_0_.Q & h_1_.Q & h_2_.Q & !clk_div_7_.Q
+    # h_0_.Q & !h_1_.Q & h_2_.Q & !clk_div_7_.Q
+    # !N_298_i ) ; (4 pterms, 6 signals)
+
+led12 = !( h_0_.Q & !h_1_.Q & !h_2_.Q & !h_3_.Q & clk_div_7_.Q
+    # !h_0_.Q & h_1_.Q & !h_2_.Q & !clk_div_7_.Q
+    # !h_0_.Q & !h_1_.Q & h_2_.Q & clk_div_7_.Q
+    # !N_298_i ) ; (4 pterms, 6 signals)
+
+led13 = btn_SAFE & !h_0_.Q & h_2_.Q & !h_3_.Q & clk_div_7_.Q
+    # btn_SAFE & !h_0_.Q & !h_1_.Q & !h_2_.Q
+    # btn_SAFE & h_0_.Q & !h_1_.Q & h_2_.Q & !h_3_.Q
+    # btn_SAFE & !h_1_.Q & !h_2_.Q & h_3_.Q
+    # btn_SAFE & h_1_.Q & !h_3_.Q & !clk_div_7_.Q ; (5 pterms, 6 signals)
+
+led15 = btn_SAFE & !mm_0_.Q & !mm_2_.Q & clk_div_7_.Q
+    # btn_SAFE & !mm_0_.Q & !mm_1_.Q & !clk_div_7_.Q
+    # btn_SAFE & mm_0_.Q & !mm_1_.Q & mm_2_.Q
+    # btn_SAFE & mm_1_.Q & !mm_2_.Q & clk_div_7_.Q ; (4 pterms, 5 signals)
+
+led16 = btn_SAFE & !mm_0_.Q & !mm_1_.Q & clk_div_7_.Q
+    # btn_SAFE & mm_1_.Q & !mm_2_.Q
+    # btn_SAFE & !mm_1_.Q & mm_2_.Q & !clk_div_7_.Q
+    # btn_SAFE & !mm_2_.Q & clk_div_7_.Q ; (4 pterms, 5 signals)
+
+led17 = btn_SAFE & !mm_0_.Q & !mm_2_.Q & !clk_div_7_.Q
+    # btn_SAFE & mm_0_.Q & mm_1_.Q & !mm_2_.Q
+    # btn_SAFE & mm_0_.Q & !mm_1_.Q & mm_2_.Q
+    # btn_SAFE & !mm_1_.Q & clk_div_7_.Q ; (4 pterms, 5 signals)
+
+led18 = btn_SAFE & !mm_0_.Q & !mm_2_.Q & !clk_div_7_.Q
+    # btn_SAFE & !m_0_.Q & m_1_.Q & !m_3_.Q & clk_div_7_.Q
+    # btn_SAFE & !m_0_.Q & !m_1_.Q & !m_2_.Q & clk_div_7_.Q ; (3 pterms, 8 signals)
+
+led19.X1 = btn_SAFE & !m_1_.Q & !m_2_.Q & !m_3_.Q & clk_div_7_.Q & N_297_0
+    # btn_SAFE & m_0_.Q & !m_1_.Q & m_2_.Q & !clk_div_7_.Q & N_297_0
+    # btn_SAFE & !m_0_.Q & m_1_.Q & m_2_.Q & !clk_div_7_.Q & N_297_0 ; (3 pterms, 7 signals)
+led19.X2 = btn_SAFE & N_297_0 ; (1 pterm, 2 signals)
+
+led20.X1 = btn_SAFE & !m_0_.Q & !m_1_.Q & m_2_.Q & clk_div_7_.Q & N_297_0
+    # btn_SAFE & !m_0_.Q & m_1_.Q & !m_2_.Q & !clk_div_7_.Q & N_297_0
+    # btn_SAFE & m_0_.Q & !m_1_.Q & !m_2_.Q & !m_3_.Q & clk_div_7_.Q & N_297_0 ; (3 pterms, 7 signals)
+led20.X2 = btn_SAFE & N_297_0 ; (1 pterm, 2 signals)
+
+led21 = btn_SAFE & !m_0_.Q & m_2_.Q & !m_3_.Q & clk_div_7_.Q
+    # btn_SAFE & !m_0_.Q & !m_1_.Q & !m_2_.Q
+    # btn_SAFE & m_0_.Q & !m_1_.Q & m_2_.Q & !m_3_.Q
+    # btn_SAFE & !m_1_.Q & !m_2_.Q & m_3_.Q
+    # btn_SAFE & m_1_.Q & !m_3_.Q & !clk_div_7_.Q ; (5 pterms, 6 signals)
+
+led6 = btn_SAFE & hh_0_.Q & !hh_1_.Q
+    # btn_SAFE & !hh_0_.Q & hh_1_.Q ; (2 pterms, 3 signals)
+
+led7 = btn_SAFE & !hh_0_.Q & hh_1_.Q ; (1 pterm, 3 signals)
+
+led8 = btn_SAFE & !hh_0_.Q & hh_1_.Q ; (1 pterm, 3 signals)
+
+led9 = btn_SAFE & hh_0_.Q & !hh_1_.Q & !clk_div_7_.Q
+    # btn_SAFE & !h_0_.Q & h_1_.Q & !h_3_.Q & clk_div_7_.Q
+    # btn_SAFE & !h_0_.Q & !h_1_.Q & !h_2_.Q & clk_div_7_.Q ; (3 pterms, 8 signals)
+
+led_gnd1 = !( btn_SAFE & !clk_div_7_.Q ) ; (1 pterm, 2 signals)
+
+led_gnd2 = btn_SAFE & !clk_div_7_.Q ; (1 pterm, 2 signals)
+
+led_second_tick = !clk_div_6_.Q & !clk_div_7_.Q & !clk_div_8_.Q
+       & !clk_div_9_.Q & !clk_div_10_.Q & !clk_div_11_.Q & !clk_div_12_.Q
+       & !clk_div_13_.Q & sec_0_.Q
+    # btn_SAFE & sec_0_.Q ; (2 pterms, 10 signals)
+
+m_0_.D = !m_0_.Q ; (1 pterm, 1 signal)
+m_0_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+m_0_.CE = m_0__0 ; (1 pterm, 1 signal)
+
+m_0__0 = btn_MM
+    # !sec_3_.Q & sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & sec_5_.Q
+       & sec_6_.Q ; (2 pterms, 8 signals)
+
+m_1_.D = m_0_.Q & !m_1_.Q & m_2_.Q
+    # m_0_.Q & !m_1_.Q & !m_3_.Q
+    # !m_0_.Q & m_1_.Q ; (3 pterms, 4 signals)
+m_1_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+m_1_.CE = m_0__0 ; (1 pterm, 1 signal)
+
+m_2_.D = m_0_.Q & m_1_.Q & !m_2_.Q
+    # !m_1_.Q & m_2_.Q
+    # !m_0_.Q & m_2_.Q ; (3 pterms, 3 signals)
+m_2_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+m_2_.CE = m_0__0 ; (1 pterm, 1 signal)
+
+m_3_.D = m_0_.Q & m_1_.Q & m_2_.Q & !m_3_.Q
+    # m_1_.Q & !m_2_.Q & m_3_.Q
+    # !m_1_.Q & m_2_.Q & m_3_.Q
+    # !m_0_.Q & m_3_.Q ; (4 pterms, 4 signals)
+m_3_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+m_3_.CE = m_0__0 ; (1 pterm, 1 signal)
+
+mm_0_.D = !mm_0_.Q ; (1 pterm, 1 signal)
+mm_0_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+mm_0_.CE = mm_0__0 ; (1 pterm, 1 signal)
+
+mm_0__0 = btn_MM & m_0_.Q & !m_1_.Q & !m_2_.Q & m_3_.Q
+    # m_0_.Q & !m_1_.Q & !m_2_.Q & m_3_.Q & !sec_3_.Q & sec_0_.Q & sec_1_.Q
+       & sec_2_.Q & sec_4_.Q & sec_5_.Q & sec_6_.Q ; (2 pterms, 12 signals)
+
+mm_1_.D = mm_0_.Q & !mm_1_.Q & !mm_2_.Q
+    # !mm_0_.Q & mm_1_.Q ; (2 pterms, 3 signals)
+mm_1_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+mm_1_.CE = mm_0__0 ; (1 pterm, 1 signal)
+
+mm_2_.D = mm_0_.Q & mm_1_.Q & !mm_2_.Q
+    # !mm_0_.Q & mm_2_.Q ; (2 pterms, 3 signals)
+mm_2_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+mm_2_.CE = mm_0__0 ; (1 pterm, 1 signal)
+
+out_clk = !in_clk ; (1 pterm, 1 signal)
+
+sec_0_.D = !btn_SS & !sec_0_.Q ; (1 pterm, 2 signals)
+sec_0_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+
+sec_1_.D = !btn_SS & sec_0_.Q & !sec_1_.Q
+    # !btn_SS & !sec_0_.Q & sec_1_.Q ; (2 pterms, 3 signals)
+sec_1_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+
+sec_2_.D = !btn_SS & sec_0_.Q & sec_1_.Q & !sec_2_.Q
+    # !btn_SS & !sec_1_.Q & sec_2_.Q
+    # !btn_SS & !sec_0_.Q & sec_2_.Q ; (3 pterms, 4 signals)
+sec_2_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+
+sec_3_.T.X1 = btn_SS & sec_3_.Q
+    # !btn_SS & sec_0_.Q & sec_1_.Q & sec_2_.Q ; (2 pterms, 5 signals)
+sec_3_.T.X2 = !btn_SS & !sec_3_.Q & sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q
+       & sec_5_.Q & sec_6_.Q ; (1 pterm, 8 signals)
+sec_3_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+
+sec_4_.T = !btn_SS & sec_3_.Q & sec_0_.Q & sec_1_.Q & sec_2_.Q
+    # sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & sec_5_.Q & sec_6_.Q
+    # btn_SS & sec_4_.Q ; (3 pterms, 8 signals)
+sec_4_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+
+sec_5_.T = !btn_SS & sec_3_.Q & sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q
+    # sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & sec_5_.Q & sec_6_.Q
+    # btn_SS & sec_5_.Q ; (3 pterms, 8 signals)
+sec_5_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+
+sec_6_.T = !btn_SS & sec_3_.Q & sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q
+       & sec_5_.Q
+    # sec_0_.Q & sec_1_.Q & sec_2_.Q & sec_4_.Q & sec_5_.Q & sec_6_.Q
+    # btn_SS & sec_6_.Q ; (3 pterms, 8 signals)
+sec_6_.C = clk_div_13_.Q ; (1 pterm, 1 signal)
+

@@ -1,0 +1,14 @@
+Selecting top level module test01
+@N: CG364 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_9.v":2:7:2:16|Synthesizing module bcd2seg0_9
+
+@N: CG364 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_5.v":2:7:2:16|Synthesizing module bcd2seg0_5
+
+@N: CG364 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_2.v":2:7:2:16|Synthesizing module bcd2seg0_2
+
+@N: CG364 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":1:7:1:12|Synthesizing module test01
+
+@W: CG532 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":19:20:19:26|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
+@N: CG179 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":52:66:52:66|Removing redundant assignment
+@N: CG179 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":53:66:53:67|Removing redundant assignment
+@N: CG179 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":54:66:54:66|Removing redundant assignment
+@N: CG179 :"D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v":55:66:55:67|Removing redundant assignment

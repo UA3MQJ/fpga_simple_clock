@@ -1,0 +1,4 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MO106 :"d:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_9.v":9:4:9:7|Found ROM, 'sseg_h.SEG_buf[6:0]', 10 words by 7 bits 
+@N: MO106 :"d:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_9.v":9:4:9:7|Found ROM, 'sseg_m.SEG_buf[6:0]', 10 words by 7 bits 
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.

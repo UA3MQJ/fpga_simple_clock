@@ -1,0 +1,5 @@
+. test01 test01.v d:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.v
+sseg_h bcd2seg0_9 bcd2seg0_9.v d:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_9.v
+sseg_m bcd2seg0_9 bcd2seg0_9.v d:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_9.v
+sseg_hh bcd2seg0_2 bcd2seg0_2.v d:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_2.v
+sseg_mm bcd2seg0_5 bcd2seg0_5.v d:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\bcd2seg0_5.v

@@ -1,0 +1,905 @@
+#$ TOOL ispLEVER Classic 2.0.00.17.20.15
+#$ DATE Thu Feb 18 09:40:40 2016
+#$ MODULE test01
+#$ PINS 24 clk in_clk out_clk led_gnd1 led_gnd2 led6 led7 led8 led9 led10 led12 led13 \
+#  led15 led16 led17 led18 led19 led20 led21 led_second_tick btn_HH btn_MM btn_SS btn_SAFE
+#$ NODES 36 m_0_ m_1_ m_2_ N_298_i m_3_ mm_0_ mm_1_ mm_2_ h_0_ h_1_ h_2_ h_3_ hh_0_ hh_1_ \
+#  sec_3_ clk_div_6_ clk_div_7_ clk_div_8_ clk_div_9_ clk_div_10_ clk_div_11_ \
+#  clk_div_12_ clk_div_13_ sec_0_ sec_1_ N_297_0 sec_2_ sec_4_ sec_5_ sec_6_ clk_div_0_ \
+#  clk_div_1_ clk_div_2_ clk_div_3_ clk_div_4_ clk_div_5_
+.model test01
+.inputs clk.BLIF in_clk.BLIF btn_HH.BLIF btn_MM.BLIF btn_SS.BLIF btn_SAFE.BLIF \
+m_0_.BLIF m_1_.BLIF m_2_.BLIF N_298_i.BLIF m_3_.BLIF mm_0_.BLIF mm_1_.BLIF \
+mm_2_.BLIF h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF hh_0_.BLIF hh_1_.BLIF \
+sec_3_.BLIF clk_div_6_.BLIF clk_div_7_.BLIF clk_div_8_.BLIF clk_div_9_.BLIF \
+clk_div_10_.BLIF clk_div_11_.BLIF clk_div_12_.BLIF clk_div_13_.BLIF \
+sec_0_.BLIF sec_1_.BLIF N_297_0.BLIF sec_2_.BLIF sec_4_.BLIF sec_5_.BLIF \
+sec_6_.BLIF clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF clk_div_3_.BLIF \
+clk_div_4_.BLIF clk_div_5_.BLIF
+.outputs out_clk led_gnd1 led_gnd2 led6 led7 led8 led9 led10 led12 led13 led15 \
+led16 led17 led18 led21 led_second_tick clk_div_13_.C hh_0_.D hh_0_.CE hh_0_.C \
+hh_1_.D hh_1_.CE hh_1_.C h_0_.D h_0_.CE h_0_.C h_1_.D h_1_.CE h_1_.C h_2_.D \
+h_2_.CE h_2_.C h_3_.D h_3_.CE h_3_.C m_0_.D m_0_.CE m_0_.C m_1_.D m_1_.CE \
+m_1_.C m_2_.D m_2_.CE m_2_.C m_3_.D m_3_.CE m_3_.C mm_0_.D mm_0_.CE mm_0_.C \
+mm_1_.D mm_1_.CE mm_1_.C mm_2_.D mm_2_.CE mm_2_.C sec_6_.C clk_div_0_.D \
+clk_div_0_.C clk_div_1_.D clk_div_1_.C clk_div_2_.D clk_div_2_.C clk_div_3_.D \
+clk_div_3_.C clk_div_4_.C clk_div_5_.C clk_div_6_.C clk_div_7_.C clk_div_8_.C \
+clk_div_9_.C clk_div_10_.C clk_div_11_.C clk_div_12_.C sec_3_.C sec_4_.C \
+sec_5_.C sec_0_.D sec_0_.C sec_1_.D sec_1_.C sec_2_.D sec_2_.C N_298_i N_297_0 \
+led19.X1 led19.X2 led20.X1 led20.X2 sec_3_.D.X1 sec_3_.D.X2 clk_div_6_.D.X1 \
+clk_div_6_.D.X2 clk_div_7_.D.X1 clk_div_7_.D.X2 clk_div_8_.D.X1 \
+clk_div_8_.D.X2 clk_div_9_.D.X1 clk_div_9_.D.X2 clk_div_10_.D.X1 \
+clk_div_10_.D.X2 clk_div_11_.D.X1 clk_div_11_.D.X2 clk_div_12_.D.X1 \
+clk_div_12_.D.X2 clk_div_13_.D.X1 clk_div_13_.D.X2 sec_4_.D.X1 sec_4_.D.X2 \
+sec_5_.D.X1 sec_5_.D.X2 sec_6_.D.X1 sec_6_.D.X2 clk_div_4_.D.X1 \
+clk_div_4_.D.X2 clk_div_5_.D.X1 clk_div_5_.D.X2
+.names h_1_.BLIF hh_0_.BLIF hh_0_.D
+00 1
+1- 0
+-1 0
+.names h_1_.BLIF hh_0_.BLIF hh_1_.BLIF hh_1_.D
+010 1
+001 1
+-00 0
+-11 0
+1-- 0
+.names h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF h_1_.D
+101- 1
+10-0 1
+01-- 1
+-001 0
+00-- 0
+11-- 0
+.names h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF hh_0_.BLIF hh_1_.BLIF h_2_.D
+110-1- 1
+1101-- 1
+110--0 1
+-01--- 1
+0-1--- 1
+--0001 0
+111--- 0
+-00--- 0
+0-0--- 0
+.names h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF h_3_.D
+1110 1
+-101 1
+-011 1
+0--1 1
+1111 0
+100- 0
+0--0 0
+--00 0
+-0-0 0
+.names m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF m_1_.D
+101- 1
+10-0 1
+01-- 1
+-001 0
+00-- 0
+11-- 0
+.names m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF m_3_.D
+1110 1
+-101 1
+-011 1
+0--1 1
+1111 0
+100- 0
+0--0 0
+--00 0
+-0-0 0
+.names mm_0_.BLIF mm_1_.BLIF mm_2_.BLIF mm_1_.D
+100 1
+01- 1
+-01 0
+11- 0
+00- 0
+.names mm_0_.BLIF mm_1_.BLIF mm_2_.BLIF mm_2_.D
+110 1
+0-1 1
+-00 0
+0-0 0
+1-1 0
+.names clk_div_0_.BLIF clk_div_0_.D
+0 1
+1 0
+.names btn_SAFE.BLIF h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF clk_div_7_.BLIF \
+N_298_i
+1-00-- 1
+10--0- 1
+1--00- 1
+1-0-0- 1
+1---00 1
+-111-1 0
+---11- 0
+--1-1- 0
+0----- 0
+.names m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF clk_div_7_.BLIF N_297_0
+-00-- 1
+0--0- 1
+--00- 1
+-0-0- 1
+---00 1
+111-1 0
+--11- 0
+-1-1- 0
+.names in_clk.BLIF out_clk
+0 1
+1 0
+.names btn_SAFE.BLIF clk_div_7_.BLIF led_gnd1
+0- 1
+-1 1
+10 0
+.names btn_SAFE.BLIF clk_div_7_.BLIF led_gnd2
+10 1
+0- 0
+-1 0
+.names btn_SAFE.BLIF hh_0_.BLIF hh_1_.BLIF led6
+110 1
+101 1
+-00 0
+-11 0
+0-- 0
+.names btn_SAFE.BLIF hh_0_.BLIF hh_1_.BLIF led7
+101 1
+-1- 0
+0-- 0
+--0 0
+.names btn_SAFE.BLIF hh_0_.BLIF hh_1_.BLIF led8
+101 1
+-1- 0
+0-- 0
+--0 0
+.names btn_SAFE.BLIF h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF hh_0_.BLIF \
+hh_1_.BLIF clk_div_7_.BLIF led9
+1----100 1
+101-0--1 1
+1000---1 1
+--1-1--1 0
+--01---1 0
+------10 0
+-----0-0 0
+0------- 0
+-1-----1 0
+.names N_298_i.BLIF h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF clk_div_7_.BLIF \
+led10
+100--0 1
+1-10-- 1
+1--01- 1
+111--- 1
+1--0-0 1
+1--1-1 1
+--0001 0
+-011-0 0
+-101-0 0
+0----- 0
+.names N_298_i.BLIF h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF clk_div_7_.BLIF \
+led12
+11---0 1
+1--1-0 1
+11--1- 1
+1000-- 1
+1-1--1 1
+11-1-- 1
+-10001 0
+-010-0 0
+-001-1 0
+0----- 0
+.names btn_SAFE.BLIF h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF clk_div_7_.BLIF \
+led13
+10-101 1
+1000-- 1
+11010- 1
+1-001- 1
+1-1-00 1
+-1000- 0
+-001-0 0
+---11- 0
+--1-1- 0
+--10-1 0
+-11--1 0
+0----- 0
+.names btn_SAFE.BLIF mm_0_.BLIF mm_1_.BLIF mm_2_.BLIF clk_div_7_.BLIF led15
+10-01 1
+100-0 1
+1101- 1
+1-101 1
+-100- 0
+-0-11 0
+--11- 0
+--1-0 0
+0---- 0
+.names btn_SAFE.BLIF mm_0_.BLIF mm_1_.BLIF mm_2_.BLIF clk_div_7_.BLIF led16
+100-1 1
+1-10- 1
+1-010 1
+1--01 1
+--000 0
+-1-11 0
+--11- 0
+0---- 0
+.names btn_SAFE.BLIF mm_0_.BLIF mm_1_.BLIF mm_2_.BLIF clk_div_7_.BLIF led17
+10-00 1
+1110- 1
+1101- 1
+1-0-1 1
+-1000 0
+-01-1 0
+-0-10 0
+--11- 0
+0---- 0
+.names btn_SAFE.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF mm_0_.BLIF \
+mm_2_.BLIF clk_div_7_.BLIF led18
+1----000 1
+101-0--1 1
+1000---1 1
+--1-1--1 0
+--01---1 0
+------10 0
+-----1-0 0
+0------- 0
+-1-----1 0
+.names btn_SAFE.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF clk_div_7_.BLIF \
+led21
+10-101 1
+1000-- 1
+11010- 1
+1-001- 1
+1-1-00 1
+-1000- 0
+-001-0 0
+---11- 0
+--1-1- 0
+--10-1 0
+-11--1 0
+0----- 0
+.names btn_SAFE.BLIF clk_div_6_.BLIF clk_div_7_.BLIF clk_div_8_.BLIF \
+clk_div_9_.BLIF clk_div_10_.BLIF clk_div_11_.BLIF clk_div_12_.BLIF \
+clk_div_13_.BLIF sec_0_.BLIF led_second_tick
+-000000001 1
+1--------1 1
+0-------1- 0
+0------1-- 0
+0-----1--- 0
+0----1---- 0
+0---1----- 0
+0--1------ 0
+0-1------- 0
+01-------- 0
+---------0 0
+.names clk.BLIF clk_div_13_.C
+1 1
+0 0
+.names btn_HH.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF mm_0_.BLIF \
+mm_1_.BLIF mm_2_.BLIF h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF hh_0_.BLIF \
+hh_1_.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF hh_0_.CE
+-10011011100010111111 1
+-10011011001--0111111 1
+1-------110001------- 1
+1-------1001--------- 1
+-----------01-------- 0
+-----------0-0------- 0
+---------0-0--------- 0
+---------1-1--------- 0
+0------------------0- 0
+0-----------------0-- 0
+0----------------0--- 0
+0---------------0---- 0
+0--------------0----- 0
+0-------------1------ 0
+0------0------------- 0
+0-----1-------------- 0
+0----0--------------- 0
+0---0---------------- 0
+0--1----------------- 0
+0-1------------------ 0
+00------------------- 0
+----------1---------- 0
+--------0------------ 0
+0-------------------0 0
+.names clk_div_13_.BLIF hh_0_.C
+1 1
+0 0
+.names btn_HH.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF mm_0_.BLIF \
+mm_1_.BLIF mm_2_.BLIF h_0_.BLIF h_1_.BLIF h_2_.BLIF h_3_.BLIF hh_0_.BLIF \
+hh_1_.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF hh_1_.CE
+-10011011100010111111 1
+-10011011001--0111111 1
+1-------110001------- 1
+1-------1001--------- 1
+-----------01-------- 0
+-----------0-0------- 0
+---------0-0--------- 0
+---------1-1--------- 0
+0------------------0- 0
+0-----------------0-- 0
+0----------------0--- 0
+0---------------0---- 0
+0--------------0----- 0
+0-------------1------ 0
+0------0------------- 0
+0-----1-------------- 0
+0----0--------------- 0
+0---0---------------- 0
+0--1----------------- 0
+0-1------------------ 0
+00------------------- 0
+----------1---------- 0
+--------0------------ 0
+0-------------------0 0
+.names clk_div_13_.BLIF hh_1_.C
+1 1
+0 0
+.names h_0_.BLIF h_0_.D
+0 1
+1 0
+.names btn_HH.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF mm_0_.BLIF \
+mm_1_.BLIF mm_2_.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF \
+sec_4_.BLIF sec_5_.BLIF sec_6_.BLIF h_0_.CE
+-10011010111111 1
+1-------------- 1
+0------------0- 0
+0-----------0-- 0
+0----------0--- 0
+0---------0---- 0
+0--------0----- 0
+0-------1------ 0
+0------0------- 0
+0-----1-------- 0
+0----0--------- 0
+0---0---------- 0
+0--1----------- 0
+0-1------------ 0
+00------------- 0
+0-------------0 0
+.names clk_div_13_.BLIF h_0_.C
+1 1
+0 0
+.names btn_HH.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF mm_0_.BLIF \
+mm_1_.BLIF mm_2_.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF \
+sec_4_.BLIF sec_5_.BLIF sec_6_.BLIF h_1_.CE
+-10011010111111 1
+1-------------- 1
+0------------0- 0
+0-----------0-- 0
+0----------0--- 0
+0---------0---- 0
+0--------0----- 0
+0-------1------ 0
+0------0------- 0
+0-----1-------- 0
+0----0--------- 0
+0---0---------- 0
+0--1----------- 0
+0-1------------ 0
+00------------- 0
+0-------------0 0
+.names clk_div_13_.BLIF h_1_.C
+1 1
+0 0
+.names btn_HH.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF mm_0_.BLIF \
+mm_1_.BLIF mm_2_.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF \
+sec_4_.BLIF sec_5_.BLIF sec_6_.BLIF h_2_.CE
+-10011010111111 1
+1-------------- 1
+0------------0- 0
+0-----------0-- 0
+0----------0--- 0
+0---------0---- 0
+0--------0----- 0
+0-------1------ 0
+0------0------- 0
+0-----1-------- 0
+0----0--------- 0
+0---0---------- 0
+0--1----------- 0
+0-1------------ 0
+00------------- 0
+0-------------0 0
+.names clk_div_13_.BLIF h_2_.C
+1 1
+0 0
+.names btn_HH.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF mm_0_.BLIF \
+mm_1_.BLIF mm_2_.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF \
+sec_4_.BLIF sec_5_.BLIF sec_6_.BLIF h_3_.CE
+-10011010111111 1
+1-------------- 1
+0------------0- 0
+0-----------0-- 0
+0----------0--- 0
+0---------0---- 0
+0--------0----- 0
+0-------1------ 0
+0------0------- 0
+0-----1-------- 0
+0----0--------- 0
+0---0---------- 0
+0--1----------- 0
+0-1------------ 0
+00------------- 0
+0-------------0 0
+.names clk_div_13_.BLIF h_3_.C
+1 1
+0 0
+.names m_0_.BLIF m_0_.D
+0 1
+1 0
+.names btn_MM.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF m_0_.CE
+-0111111 1
+1------- 1
+0-----0- 0
+0----0-- 0
+0---0--- 0
+0--0---- 0
+0-0----- 0
+01------ 0
+0------0 0
+.names clk_div_13_.BLIF m_0_.C
+1 1
+0 0
+.names btn_MM.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF m_1_.CE
+-0111111 1
+1------- 1
+0-----0- 0
+0----0-- 0
+0---0--- 0
+0--0---- 0
+0-0----- 0
+01------ 0
+0------0 0
+.names clk_div_13_.BLIF m_1_.C
+1 1
+0 0
+.names m_0_.BLIF m_1_.BLIF m_2_.BLIF m_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names btn_MM.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF m_2_.CE
+-0111111 1
+1------- 1
+0-----0- 0
+0----0-- 0
+0---0--- 0
+0--0---- 0
+0-0----- 0
+01------ 0
+0------0 0
+.names clk_div_13_.BLIF m_2_.C
+1 1
+0 0
+.names btn_MM.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF m_3_.CE
+-0111111 1
+1------- 1
+0-----0- 0
+0----0-- 0
+0---0--- 0
+0--0---- 0
+0-0----- 0
+01------ 0
+0------0 0
+.names clk_div_13_.BLIF m_3_.C
+1 1
+0 0
+.names mm_0_.BLIF mm_0_.D
+0 1
+1 0
+.names btn_MM.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF sec_3_.BLIF \
+sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF sec_5_.BLIF sec_6_.BLIF \
+mm_0_.CE
+-10010111111 1
+11001------- 1
+0---------0- 0
+0--------0-- 0
+0-------0--- 0
+0------0---- 0
+0-----0----- 0
+0----1------ 0
+----0------- 0
+---1-------- 0
+--1--------- 0
+-0---------- 0
+0----------0 0
+.names clk_div_13_.BLIF mm_0_.C
+1 1
+0 0
+.names btn_MM.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF sec_3_.BLIF \
+sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF sec_5_.BLIF sec_6_.BLIF \
+mm_1_.CE
+-10010111111 1
+11001------- 1
+0---------0- 0
+0--------0-- 0
+0-------0--- 0
+0------0---- 0
+0-----0----- 0
+0----1------ 0
+----0------- 0
+---1-------- 0
+--1--------- 0
+-0---------- 0
+0----------0 0
+.names clk_div_13_.BLIF mm_1_.C
+1 1
+0 0
+.names btn_MM.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF sec_3_.BLIF \
+sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF sec_5_.BLIF sec_6_.BLIF \
+mm_2_.CE
+-10010111111 1
+11001------- 1
+0---------0- 0
+0--------0-- 0
+0-------0--- 0
+0------0---- 0
+0-----0----- 0
+0----1------ 0
+----0------- 0
+---1-------- 0
+--1--------- 0
+-0---------- 0
+0----------0 0
+.names clk_div_13_.BLIF mm_2_.C
+1 1
+0 0
+.names clk_div_13_.BLIF sec_6_.C
+1 1
+0 0
+.names clk.BLIF clk_div_0_.C
+1 1
+0 0
+.names clk_div_0_.BLIF clk_div_1_.BLIF clk_div_1_.D
+10 1
+01 1
+00 0
+11 0
+.names clk.BLIF clk_div_1_.C
+1 1
+0 0
+.names clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF clk_div_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names clk.BLIF clk_div_2_.C
+1 1
+0 0
+.names clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF clk_div_3_.BLIF \
+clk_div_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names clk.BLIF clk_div_3_.C
+1 1
+0 0
+.names clk.BLIF clk_div_4_.C
+1 1
+0 0
+.names clk.BLIF clk_div_5_.C
+1 1
+0 0
+.names clk.BLIF clk_div_6_.C
+1 1
+0 0
+.names clk.BLIF clk_div_7_.C
+1 1
+0 0
+.names clk.BLIF clk_div_8_.C
+1 1
+0 0
+.names clk.BLIF clk_div_9_.C
+1 1
+0 0
+.names clk.BLIF clk_div_10_.C
+1 1
+0 0
+.names clk.BLIF clk_div_11_.C
+1 1
+0 0
+.names clk.BLIF clk_div_12_.C
+1 1
+0 0
+.names clk_div_13_.BLIF sec_3_.C
+1 1
+0 0
+.names clk_div_13_.BLIF sec_4_.C
+1 1
+0 0
+.names clk_div_13_.BLIF sec_5_.C
+1 1
+0 0
+.names btn_SS.BLIF sec_0_.BLIF sec_0_.D
+00 1
+1- 0
+-1 0
+.names clk_div_13_.BLIF sec_0_.C
+1 1
+0 0
+.names btn_SS.BLIF sec_0_.BLIF sec_1_.BLIF sec_1_.D
+010 1
+001 1
+-00 0
+-11 0
+1-- 0
+.names clk_div_13_.BLIF sec_1_.C
+1 1
+0 0
+.names btn_SS.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_2_.D
+0110 1
+0-01 1
+00-1 1
+-111 0
+--00 0
+-0-0 0
+1--- 0
+.names clk_div_13_.BLIF sec_2_.C
+1 1
+0 0
+.names btn_SAFE.BLIF N_297_0.BLIF led19.X1
+11 1
+0- 0
+-0 0
+.names btn_SAFE.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF clk_div_7_.BLIF \
+N_297_0.BLIF led19.X2
+1-00011 1
+1101-01 1
+1011-01 1
+0------ 0
+------0 0
+-11---- 0
+--10--- 0
+---01-- 0
+--1--1- 0
+---1-1- 0
+---0-0- 0
+-001--- 0
+.names btn_SAFE.BLIF N_297_0.BLIF led20.X1
+11 1
+0- 0
+-0 0
+.names btn_SAFE.BLIF m_0_.BLIF m_1_.BLIF m_2_.BLIF m_3_.BLIF clk_div_7_.BLIF \
+N_297_0.BLIF led20.X2
+1001-11 1
+1010-01 1
+1100011 1
+0------ 0
+------0 0
+-11---- 0
+-1-1--- 0
+--11--- 0
+-1--1-- 0
+--1--1- 0
+-1---0- 0
+--0--0- 0
+-000--- 0
+.names btn_SS.BLIF sec_3_.BLIF sec_3_.D.X1
+00 1
+1- 0
+-1 0
+.names btn_SS.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF sec_3_.D.X2
+0-0----- 1
+0--0---- 1
+0---0--- 1
+00---111 1
+1------- 0
+-1111--- 0
+--1110-- 0
+--111-0- 0
+--111--0 0
+.names clk_div_6_.BLIF clk_div_6_.D.X1
+1 1
+0 0
+.names clk_div_6_.BLIF clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF \
+clk_div_3_.BLIF clk_div_4_.BLIF clk_div_5_.BLIF clk_div_6_.D.X2
+-111111 1
+-0----- 0
+--0---- 0
+---0--- 0
+----0-- 0
+-----0- 0
+------0 0
+.names clk_div_7_.BLIF clk_div_7_.D.X1
+1 1
+0 0
+.names clk_div_6_.BLIF clk_div_7_.BLIF clk_div_0_.BLIF clk_div_1_.BLIF \
+clk_div_2_.BLIF clk_div_3_.BLIF clk_div_4_.BLIF clk_div_5_.BLIF \
+clk_div_7_.D.X2
+1-111111 1
+0------- 0
+--0----- 0
+---0---- 0
+----0--- 0
+-----0-- 0
+------0- 0
+-------0 0
+.names clk_div_8_.BLIF clk_div_8_.D.X1
+1 1
+0 0
+.names clk_div_6_.BLIF clk_div_7_.BLIF clk_div_8_.BLIF clk_div_0_.BLIF \
+clk_div_1_.BLIF clk_div_2_.BLIF clk_div_3_.BLIF clk_div_4_.BLIF \
+clk_div_5_.BLIF clk_div_8_.D.X2
+11-111111 1
+0-------- 0
+-0------- 0
+---0----- 0
+----0---- 0
+-----0--- 0
+------0-- 0
+-------0- 0
+--------0 0
+.names clk_div_9_.BLIF clk_div_9_.D.X1
+1 1
+0 0
+.names clk_div_6_.BLIF clk_div_7_.BLIF clk_div_8_.BLIF clk_div_9_.BLIF \
+clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF clk_div_3_.BLIF \
+clk_div_4_.BLIF clk_div_5_.BLIF clk_div_9_.D.X2
+111-111111 1
+0--------- 0
+-0-------- 0
+--0------- 0
+----0----- 0
+-----0---- 0
+------0--- 0
+-------0-- 0
+--------0- 0
+---------0 0
+.names clk_div_10_.BLIF clk_div_10_.D.X1
+1 1
+0 0
+.names clk_div_6_.BLIF clk_div_7_.BLIF clk_div_8_.BLIF clk_div_9_.BLIF \
+clk_div_10_.BLIF clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF \
+clk_div_3_.BLIF clk_div_4_.BLIF clk_div_5_.BLIF clk_div_10_.D.X2
+1111-111111 1
+0---------- 0
+-0--------- 0
+--0-------- 0
+---0------- 0
+-----0----- 0
+------0---- 0
+-------0--- 0
+--------0-- 0
+---------0- 0
+----------0 0
+.names clk_div_11_.BLIF clk_div_11_.D.X1
+1 1
+0 0
+.names clk_div_6_.BLIF clk_div_7_.BLIF clk_div_8_.BLIF clk_div_9_.BLIF \
+clk_div_10_.BLIF clk_div_11_.BLIF clk_div_0_.BLIF clk_div_1_.BLIF \
+clk_div_2_.BLIF clk_div_3_.BLIF clk_div_4_.BLIF clk_div_5_.BLIF \
+clk_div_11_.D.X2
+11111-111111 1
+0----------- 0
+-0---------- 0
+--0--------- 0
+---0-------- 0
+----0------- 0
+------0----- 0
+-------0---- 0
+--------0--- 0
+---------0-- 0
+----------0- 0
+-----------0 0
+.names clk_div_12_.BLIF clk_div_12_.D.X1
+1 1
+0 0
+.names clk_div_6_.BLIF clk_div_7_.BLIF clk_div_8_.BLIF clk_div_9_.BLIF \
+clk_div_10_.BLIF clk_div_11_.BLIF clk_div_12_.BLIF clk_div_0_.BLIF \
+clk_div_1_.BLIF clk_div_2_.BLIF clk_div_3_.BLIF clk_div_4_.BLIF \
+clk_div_5_.BLIF clk_div_12_.D.X2
+111111-111111 1
+0------------ 0
+-0----------- 0
+--0---------- 0
+---0--------- 0
+----0-------- 0
+-----0------- 0
+-------0----- 0
+--------0---- 0
+---------0--- 0
+----------0-- 0
+-----------0- 0
+------------0 0
+.names clk_div_13_.BLIF clk_div_13_.D.X1
+1 1
+0 0
+.names clk_div_6_.BLIF clk_div_7_.BLIF clk_div_8_.BLIF clk_div_9_.BLIF \
+clk_div_10_.BLIF clk_div_11_.BLIF clk_div_12_.BLIF clk_div_13_.BLIF \
+clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF clk_div_3_.BLIF \
+clk_div_4_.BLIF clk_div_5_.BLIF clk_div_13_.D.X2
+1111111-111111 1
+0------------- 0
+-0------------ 0
+--0----------- 0
+---0---------- 0
+----0--------- 0
+-----0-------- 0
+------0------- 0
+--------0----- 0
+---------0---- 0
+----------0--- 0
+-----------0-- 0
+------------0- 0
+-------------0 0
+.names sec_4_.BLIF sec_4_.D.X1
+1 1
+0 0
+.names btn_SS.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF sec_4_.D.X2
+01111--- 1
+1----1-- 1
+--111111 1
+-11111-- 1
+0-0----- 0
+0--0---- 0
+0---0--- 0
+1----0-- 0
+-0---0-- 0
+00----0- 0
+00-----0 0
+.names sec_5_.BLIF sec_5_.D.X1
+1 1
+0 0
+.names btn_SS.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF sec_5_.D.X2
+011111-- 1
+1-----1- 1
+-111111- 1
+--111111 1
+0-0----- 0
+0--0---- 0
+0---0--- 0
+0----0-- 0
+1-----0- 0
+-0----0- 0
+00-----0 0
+.names sec_6_.BLIF sec_6_.D.X1
+1 1
+0 0
+.names btn_SS.BLIF sec_3_.BLIF sec_0_.BLIF sec_1_.BLIF sec_2_.BLIF sec_4_.BLIF \
+sec_5_.BLIF sec_6_.BLIF sec_6_.D.X2
+0111111- 1
+1------1 1
+--111111 1
+0-0----- 0
+0--0---- 0
+0---0--- 0
+0----0-- 0
+0-----0- 0
+1------0 0
+-0-----0 0
+.names clk_div_4_.BLIF clk_div_4_.D.X1
+1 1
+0 0
+.names clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF clk_div_3_.BLIF \
+clk_div_4_.BLIF clk_div_4_.D.X2
+1111- 1
+0---- 0
+-0--- 0
+--0-- 0
+---0- 0
+.names clk_div_5_.BLIF clk_div_5_.D.X1
+1 1
+0 0
+.names clk_div_0_.BLIF clk_div_1_.BLIF clk_div_2_.BLIF clk_div_3_.BLIF \
+clk_div_4_.BLIF clk_div_5_.BLIF clk_div_5_.D.X2
+11111- 1
+0----- 0
+-0---- 0
+--0--- 0
+---0-- 0
+----0- 0
+.end

@@ -1,0 +1,9 @@
+D:\lscc\ispLEVER_Classic2_0\synpbase\bin64\m_cpld.exe  -prodtype  synplify_pro  -encrypt  -pro  -rundir  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj  -part LC4064B  -package T44C  -grade -2.5   -ispmach4s -RWCheckOnRam 1 -areadelay 0 -minc -auto_constrain_io -summaryfile D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synlog\report\test01_fpga_mapper.xml -top_level_module  test01  -multisrs  -ta_num_paths 3  -ta_num_points 0  -oedif  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.edi  -freq 200.000  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synwork\test01_mult.srs  -ologparam  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\syntmp\test01.plg  -osyn  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.srm  -prjdir  d:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\  -prjname  test01  -log  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synlog\test01_fpga_mapper.srr 
+rc:0 success:1
+D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.edi|o|1455777635|120352
+D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synwork\test01_mult.srs|i|1455777635|6744
+D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\syntmp\test01.plg|o|1455777635|0
+D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\test01.srm|o|1455777635|38989
+D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synlog\test01_fpga_mapper.srr|o|1455777635|1585
+D:\lscc\ispLEVER_Classic2_0\synpbase\bin\m_cpld.exe|i|1399362084|7067648
+D:\lscc\ispLEVER_Classic2_0\synpbase\bin64\m_cpld.exe|i|1399364922|8049664

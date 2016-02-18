@@ -1,0 +1,7 @@
+D:\lscc\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe  -link  -top  test01  -multisrs  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synwork\test01_comp.srs  -osyn  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synwork\test01_mult.srs  -log  D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synlog\test01_multi_srs_gen.srr 
+rc:0 success:1
+D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synwork\test01_comp.srs|i|1455777634|7687
+D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synwork\test01_mult.srs|o|1455777635|6744
+D:\fpga_projects\fpga_simple_clock\clock_isplvr_prj\synlog\test01_multi_srs_gen.srr|o|1455777635|480
+D:\lscc\ispLEVER_Classic2_0\synpbase\bin\syn_nfilter.exe|i|1401220336|2741760
+D:\lscc\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe|i|1401220532|6337536

@@ -1,0 +1,9 @@
+MODULE test01 DEFIN test01.v
+	SUBMODULE bcd2seg0_2
+		INSTANCE sseg_hh
+	SUBMODULE bcd2seg0_9
+		INSTANCE sseg_h
+	SUBMODULE bcd2seg0_5
+		INSTANCE sseg_mm
+	SUBMODULE bcd2seg0_9
+		INSTANCE sseg_m

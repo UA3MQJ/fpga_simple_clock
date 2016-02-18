@@ -1,0 +1,1 @@
+-global -lci test01.lct -touch test01.imp
